@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A&amp;A Roofing &amp; Exteriors | Roofing in Omaha, NE</title><meta name="description" content="Roofing in Omaha, NE. Book a free estimate with A&amp;A Roofing &amp; Exteriors online or call (402) 275-5637.">
 <meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="A&amp;A Roofing &amp; Exteriors | Roofing in Omaha, NE"><meta property="og:description" content="Roofing in Omaha, NE. Book a free estimate with A&amp;A Roofing &amp; Exteriors online or call (402) 275-5637.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/bold.css"><script src="../assets/site.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "A\u0026A Roofing \u0026 Exteriors", "address": {"@type": "PostalAddress", "addressLocality": "Omaha", "addressRegion": "NE"}, "telephone": "(402) 275-5637", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 38}}</script>
@@ -96,20 +96,23 @@
     <p class="lead">Don't like calling? No problem. Pick a day here and we'll reach out to confirm. Or call us, we pick up.</p>
     <div class="callrow"><span class="ic"><svg><use href="#phone"/></svg></span><div><small>Call or text</small><a href="tel:+14022755637">(402) 275-5637</a></div></div>
   </div>
-  <form class="demo-form">
+  <form data-business="A&amp;A Roofing &amp; Exteriors" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="A&amp;A Roofing &amp; Exteriors" class="demo-form">
     <h3>Book your estimate</h3>
     <p class="sub">Takes about 30 seconds.</p>
     <div class="grid">
-      <label class="fld">Name<input required autocomplete="name" placeholder="Jane Smith"></label>
-      <label class="fld">Phone<input type="tel" required autocomplete="tel" placeholder="Your number"></label>
-      <label class="fld full">Address<input autocomplete="street-address" placeholder="Street, city"></label>
-      <label class="fld full">Service<select><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or hail damage</option><option>Roof inspection</option><option>Something else</option></select></label>
-      <label class="fld">Best day<input type="date"></label>
-      <div class="fld">Best time<div class="seg"><label><input type="radio" name="t" checked><span>Morning</span></label><label><input type="radio" name="t"><span>Afternoon</span></label></div></div>
+      <label class="fld">Name<input name="name" maxlength="120" required autocomplete="name" placeholder="Jane Smith"></label>
+      <label class="fld">Phone<input name="phone" maxlength="40" type="tel" required autocomplete="tel" placeholder="Your number"></label>
+      <label class="fld full">Email (optional)<input name="email" type="email" autocomplete="email" maxlength="254"></label>
+        <label class="fld full">Address<input name="address" maxlength="250" autocomplete="street-address" placeholder="Street, city"></label>
+      <label class="fld full">Service<select name="service" required><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or hail damage</option><option>Roof inspection</option><option>Something else</option></select></label>
+      <label class="fld full">Message (optional)<textarea name="message" maxlength="2000" rows="3"></textarea></label>
+        <label class="fld">Best day<input name="day" type="date"></label>
+      <div class="fld">Best time<div class="seg"><label><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></div>
     </div>
     <button class="btn btn-o" type="submit">Request my estimate <svg><use href="#arrow"/></svg></button>
-    <p class="fine">Sample form. Nothing is sent or saved.</p>
-    <p class="form-result" role="status" hidden></p>
+    <p class="fine">We only use this to contact you about your request.</p>
+    <input type="text" name="hp" class="booking-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="t">
+      <p class="form-result" role="status" hidden></p>
   </form>
 </div></section>
 

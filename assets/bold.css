@@ -210,3 +210,6 @@ footer .base{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;font-size
 .mt{margin-top:30px}
 footer .big .w{color:#fff}
 body.trade-hvac{--brown:#16222e;--brown-2:#22313f;--green:#0f4f63;--green-2:#165f75;--paper:#f1f3f4;--paper-2:#e4e8ea;--line:#cfd6db;--muted:#5d6a74}
+
+.booking-hp{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap}
+.demo-form textarea{width:100%;font:inherit;border:1px solid #b8c1c8;border-radius:6px;padding:12px;resize:vertical}

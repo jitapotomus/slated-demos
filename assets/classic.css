@@ -209,3 +209,6 @@ section.pad.flush{padding-top:0}
 .svc img{background:var(--soft)}
 .area.solo .wrap{grid-template-columns:1fr}
 body.trade-hvac{--accent:#e8552a;--accent-dark:#c4431d}
+
+.booking-hp{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap}
+.demo-form textarea{width:100%;font:inherit;border:1px solid #b8c1c8;border-radius:6px;padding:12px;resize:vertical}

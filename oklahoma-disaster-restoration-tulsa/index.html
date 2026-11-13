@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oklahoma Disaster Restoration | Roofing in Tulsa, OK</title><meta name="description" content="Roofing in Tulsa, OK. Book a free estimate with Oklahoma Disaster Restoration online or call (918) 622-7641.">
 <meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Oklahoma Disaster Restoration | Roofing in Tulsa, OK"><meta property="og:description" content="Roofing in Tulsa, OK. Book a free estimate with Oklahoma Disaster Restoration online or call (918) 622-7641.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/warm.css"><script src="../assets/site.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Oklahoma Disaster Restoration", "address": {"@type": "PostalAddress", "addressLocality": "Tulsa", "addressRegion": "OK"}, "telephone": "(918) 622-7641", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.7, "reviewCount": 148}}</script>
@@ -49,17 +49,19 @@
       <div><h2>Book a free estimate</h2><p class="note">Not a fan of phone calls? Pick a day here and we'll reach out to confirm.</p></div>
       <a href="tel:+19186227641"><svg><use href="#phone"/></svg>(918) 622-7641</a>
     </div>
-    <form class="demo-form">
+    <form data-business="Oklahoma Disaster Restoration" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="Oklahoma Disaster Restoration" class="demo-form">
       <div class="fields">
-        <input placeholder="Your name" required autocomplete="name" aria-label="Name">
-        <input type="tel" placeholder="Phone" required autocomplete="tel" aria-label="Phone">
-        <input placeholder="Email (optional)" autocomplete="email" aria-label="Email">
-        <input class="w2" placeholder="Home address" autocomplete="street-address" aria-label="Address">
-        <select aria-label="Service"><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or hail damage</option><option>Roof inspection</option><option>Something else</option></select>
-        <input type="date" aria-label="Best day">
-        <div class="pick w2"><label><input type="radio" name="t" checked><span>Morning</span></label><label><input type="radio" name="t"><span>Afternoon</span></label><label><input type="radio" name="t"><span>Any time</span></label></div>
+        <input name="name" maxlength="120" placeholder="Your name" required autocomplete="name" aria-label="Name">
+        <input name="phone" maxlength="40" type="tel" placeholder="Phone" required autocomplete="tel" aria-label="Phone">
+        <input type="email" name="email" maxlength="254" placeholder="Email (optional)" autocomplete="email" aria-label="Email">
+        <input name="address" maxlength="250" class="w2" placeholder="Home address" autocomplete="street-address" aria-label="Address">
+        <select name="service" required aria-label="Service"><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or hail damage</option><option>Roof inspection</option><option>Something else</option></select>
+        <input name="day" type="date" aria-label="Best day">
+        <textarea class="w2" name="message" maxlength="2000" rows="3" placeholder="What can we help with? (optional)" aria-label="Message"></textarea>
+        <div class="pick w2"><label><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label><label><input type="radio" name="time" value="any"><span>Any time</span></label></div>
       </div>
-      <div class="row"><span class="fine">Sample form. Nothing is sent or saved.</span><button class="btn btn-red" type="submit">Request my estimate <svg><use href="#arrow"/></svg></button></div>
+      <div class="row"><span class="fine">We only use this to contact you about your request.</span><button class="btn btn-red" type="submit">Request my estimate <svg><use href="#arrow"/></svg></button></div>
+      <input type="text" name="hp" class="booking-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="t">
       <p class="form-result" role="status" hidden></p>
     </form>
   </div>

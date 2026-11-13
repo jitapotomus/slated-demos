@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Midwest Roofpros &amp; Construction | Roofing in Tulsa, OK</title><meta name="description" content="Roofing in Tulsa, OK. Book a free estimate with Midwest Roofpros &amp; Construction online or call (918) 957-2868.">
 <meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Midwest Roofpros &amp; Construction | Roofing in Tulsa, OK"><meta property="og:description" content="Roofing in Tulsa, OK. Book a free estimate with Midwest Roofpros &amp; Construction online or call (918) 957-2868.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/classic.css"><script src="../assets/site.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Midwest Roofpros \u0026 Construction", "address": {"@type": "PostalAddress", "addressLocality": "Tulsa", "addressRegion": "OK"}, "telephone": "(918) 957-2868", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 36}}</script>
@@ -53,19 +53,22 @@
       </div>
       <a class="g-badge" href="#reviews"><span class="g"><svg width="20" height="20"><use href="#google"/></svg></span><span><b>4.9</b> <span class="stars">★★★★★</span><small>from 36 Google reviews</small></span></a>
     </div>
-    <form class="card demo-form">
+    <form data-business="Midwest Roofpros &amp; Construction" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="Midwest Roofpros &amp; Construction" class="card demo-form">
       <h2>Book a free estimate</h2>
       <p class="sub">Takes 30 seconds. We'll call to confirm a time.</p>
       <div class="form">
-        <label class="f">Name<input required autocomplete="name" placeholder="Jane Smith"></label>
-        <label class="f">Phone<input type="tel" required autocomplete="tel" placeholder="Your number"></label>
-        <label class="f full">Address<input autocomplete="street-address" placeholder="Street, city"></label>
-        <label class="f full">What do you need?<select><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or hail damage</option><option>Roof inspection</option><option>Something else</option></select></label>
-        <label class="f">Best day<input type="date"></label>
-        <div class="f"><span>Best time</span><div class="slots"><label><input type="radio" name="t" checked><span>Morning</span></label><label><input type="radio" name="t"><span>Afternoon</span></label></div></div>
+        <label class="f">Name<input name="name" maxlength="120" required autocomplete="name" placeholder="Jane Smith"></label>
+        <label class="f">Phone<input name="phone" maxlength="40" type="tel" required autocomplete="tel" placeholder="Your number"></label>
+        <label class="f full">Email (optional)<input name="email" type="email" autocomplete="email" maxlength="254"></label>
+        <label class="f full">Address<input name="address" maxlength="250" autocomplete="street-address" placeholder="Street, city"></label>
+        <label class="f full">What do you need?<select name="service" required><option>Roof replacement</option><option>Roof repair / leak</option><option>Storm or hail damage</option><option>Roof inspection</option><option>Something else</option></select></label>
+        <label class="f full">Message (optional)<textarea name="message" maxlength="2000" rows="3"></textarea></label>
+        <label class="f">Best day<input name="day" type="date"></label>
+        <div class="f"><span>Best time</span><div class="slots"><label><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></div>
       </div>
       <button class="btn btn-accent" type="submit">Request my estimate <svg><use href="#arrow"/></svg></button>
-      <p class="fine">Sample form. Nothing is sent or saved.</p>
+      <p class="fine">We only use this to contact you about your request.</p>
+      <input type="text" name="hp" class="booking-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="t">
       <p class="form-result" role="status" hidden></p>
     </form>
   </div>

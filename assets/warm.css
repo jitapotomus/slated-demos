@@ -199,3 +199,6 @@ section.pad.tight{padding-bottom:40px}
 body.trade-hvac{--red:#1f64a8;--red-2:#174f87;--cream:#f7f8f6;--cream-2:#eaf0f2}
 body.trade-hvac .final .box::after{background:rgba(23,64,110,.86)}
 body.trade-hvac .hero h1 i,body.trade-hvac .hero .tag{color:#bfe0ff}
+
+.booking-hp{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap}
+.demo-form textarea{width:100%;font:inherit;border:1px solid #b8c1c8;border-radius:6px;padding:12px;resize:vertical}
