@@ -198,5 +198,245 @@
    1400,
    1114
   ]
+ },
+ "plumb-kitchen": {
+  "pexels_id": "39894637",
+  "alt": "Spacious modern kitchen with white cabinets and granite countertops. Perfect for culinary exploration.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "plumb-bath": {
+  "pexels_id": "7031840",
+  "alt": "White bathtub with tap near decorative partition placed near sink and mirrors in stylish light bathroom with glass shower cabin",
+  "size": [
+   1600,
+   1068
+  ]
+ },
+ "plumb-pipes": {
+  "pexels_id": "28169591",
+  "alt": "Copper plumbing fittings arranged in a row, showcasing metallic texture and industrial detail.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "plumb-wrench": {
+  "pexels_id": "6419128",
+  "alt": "Close-up of a plumber's hands installing steel pipes indoors, showcasing skilled manual work.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "plumb-shower": {
+  "pexels_id": "7005268",
+  "alt": "Shower cabin with glass walls near mirror hanging on wall above sink in modern minimalist styled bathroom",
+  "size": [
+   1600,
+   1068
+  ]
+ },
+ "land-lawn": {
+  "pexels_id": "280229",
+  "alt": "Contemporary house exterior with large manicured lawn and beautiful garden.",
+  "size": [
+   1600,
+   1063
+  ]
+ },
+ "land-mow": {
+  "pexels_id": "5163432",
+  "alt": "A man using a lawn mower to trim grass in a sunny outdoor garden.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "land-garden": {
+  "pexels_id": "40493416",
+  "alt": "Colorful pink and red roses in lush garden setting, showcasing natural beauty and seasonal blooms.",
+  "size": [
+   1600,
+   900
+  ]
+ },
+ "land-crew": {
+  "pexels_id": "7728108",
+  "alt": "Crop unrecognizable horticulturist standing on knee and holding container while planting verdant sprouts",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "land-backyard": {
+  "pexels_id": "32751745",
+  "alt": "Warm string lights illuminate a backyard with lush foliage, creating a cozy outdoor ambiance.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "land-leaves": {
+  "pexels_id": "16442678",
+  "alt": "A gardener in a blue rain jacket rakes leaves in a lush green park during a light drizzle.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "land-patio": {
+  "pexels_id": "10855255",
+  "alt": "Stylish outdoor kitchen on a sunny patio with lush landscaping and clear blue sky.",
+  "size": [
+   1600,
+   1068
+  ]
+ },
+ "land-beds": {
+  "pexels_id": "36338276",
+  "alt": "Vibrant hydrangeas in shades of pink, blue, and white blooming in a garden.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-shine": {
+  "pexels_id": "29132800",
+  "alt": "Close-up of a black luxury sports car's wheel detail in an outdoor setting.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-foam": {
+  "pexels_id": "6872591",
+  "alt": "A person using a hose to spray a car with snow foam in an indoor carwash setting.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-interior": {
+  "pexels_id": "6873015",
+  "alt": "Adult man wiping a car steering wheel with a cloth inside a vehicle.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-polish": {
+  "pexels_id": "5233279",
+  "alt": "Close-up of a mechanic using a rotary polisher on a white car bonnet for detailing.",
+  "size": [
+   1600,
+   1060
+  ]
+ },
+ "det-black": {
+  "pexels_id": "4481053",
+  "alt": "Modern tuned shiny automobile parked in dark underground garage illuminated by lamp",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-wheel": {
+  "pexels_id": "6873020",
+  "alt": "Hand cleaning car exterior with brush and foam in a detailed car wash process.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-beads": {
+  "pexels_id": "32474952",
+  "alt": "Detailed view of rain-covered red car roof, showcasing texture and reflective surface.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "det-dry": {
+  "pexels_id": "4218867",
+  "alt": "Crop anonymous person polishing panel in right hand drive car by using blue fiber cloth",
+  "size": [
+   1600,
+   900
+  ]
+ },
+ "det-garage": {
+  "pexels_id": "5495047",
+  "alt": "Close-up of a red Ferrari Testarossa during a professional studio photoshoot with camera setup.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "gd-house": {
+  "pexels_id": "164558",
+  "alt": "Elegant two-storey house with garage, showcasing modern architecture and residential charm.",
+  "size": [
+   1600,
+   1049
+  ]
+ },
+ "gd-modern": {
+  "pexels_id": "7475555",
+  "alt": "Exterior of contemporary residential building with wooden door and walls paneled blue and lights",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "gd-carriage": {
+  "pexels_id": "13319884",
+  "alt": "A vibrant bougainvillea vine with purple flowers growing above a wooden garage door, adding charm to the exterior.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "gd-white": {
+  "pexels_id": "12127819",
+  "alt": "A closed white garage door adorned with lush green foliage casting shadows.",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "gd-black": {
+  "pexels_id": "33196716",
+  "alt": "Exterior of a traditional Dutch house with black doors and a landscaped garden.",
+  "size": [
+   1600,
+   1200
+  ]
+ },
+ "gd-tech": {
+  "pexels_id": "3855482",
+  "alt": "Side view of serious middle aged male in workwear standing near workbench and working with tools and metal details in lamplight in workshop",
+  "size": [
+   1600,
+   1067
+  ]
+ },
+ "gd-spring": {
+  "pexels_id": "12918652",
+  "alt": "Sleek modern garage door design with a bench in Istanbul, showcasing minimalist architecture.",
+  "size": [
+   1600,
+   1113
+  ]
+ },
+ "gd-opener": {
+  "pexels_id": "17158671",
+  "alt": "A bright and spacious industrial workshop with machinery and tools.",
+  "size": [
+   1600,
+   1067
+  ]
  }
 }
