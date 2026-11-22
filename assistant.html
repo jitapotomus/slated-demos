@@ -36,6 +36,8 @@
       const trade = candidate && typeof candidate.trade_line === 'string' && typeof candidate.safety_line === 'string' ? candidate : data._default;
       const widget = document.createElement('elevenlabs-convai');
       widget.setAttribute('agent-id', data.agent_id);
+      widget.setAttribute('action-text', 'Hear your receptionist');
+      widget.setAttribute('start-call-text', 'Start sample call');
       widget.setAttribute('dynamic-variables', JSON.stringify({business_name:business,
         trade_line:trade.trade_line, job_question:data.job_question, safety_line:trade.safety_line}));
       document.getElementById('assistant').append(widget);
