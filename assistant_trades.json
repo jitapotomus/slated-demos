@@ -1,0 +1,68 @@
+{
+  "roofing": {
+    "trade_line": "a local roofing business (Roof replacement, Roof repairs, Storm & hail damage, Roof inspections, Gutters, Insurance claim help)",
+    "safety_line": "If there is an active leak, tell them not to climb on the roof; move belongings and catch water."
+  },
+  "hvac": {
+    "trade_line": "a local hvac business (AC repair, Furnace repair, System installs, Maintenance plans, Heat pumps, Emergency service)",
+    "safety_line": "If they smell gas or a carbon monoxide alarm goes off, tell them to leave the house and call 911 or the gas company."
+  },
+  "plumbing": {
+    "trade_line": "a local plumbing business (Leak repairs, Drain cleaning, Water heaters, Toilets & taps, Pipe repairs, Plumbing checks)",
+    "safety_line": "If there is active flooding, tell them to shut off the main water valve if safe. If they smell gas, tell them to leave and call the gas company or 911."
+  },
+  "auto_detailing": {
+    "trade_line": "a local auto detailing business (Exterior wash, Interior cleaning, Seat & carpet care, Paint polishing, Wax & protection, Wheel cleaning)",
+    "safety_line": ""
+  },
+  "electrical": {
+    "trade_line": "a local electrical business (Electrical repairs, Lighting, Outlets & switches, Panel upgrades, Ceiling fans, Electrical checks)",
+    "safety_line": "If there are sparks, a burning smell or a shock, tell them to stay away from it and call 911 if there is fire or injury."
+  },
+  "landscaping": {
+    "trade_line": "a local landscaping business (Lawn care, Garden beds, Mulching, Hedge trimming, Seasonal clean-up, Landscape planning)",
+    "safety_line": ""
+  },
+  "house_cleaning": {
+    "trade_line": "a local house cleaning business (Regular cleaning, Deep cleaning, Kitchen cleaning, Bathroom cleaning, Move-in & move-out, Dusting & floors)",
+    "safety_line": ""
+  },
+  "garage_door": {
+    "trade_line": "a local garage doors business (Spring repair, Opener repair, Off-track doors, New garage doors, Remotes & keypads, Safety checks)",
+    "safety_line": ""
+  },
+  "tree_service": {
+    "trade_line": "a local tree service business (Tree removal, Tree trimming, Stump grinding, Storm clean-up, Lot clearing, Tree checks)",
+    "safety_line": "If a tree is on a power line or there is danger to people, tell them to stay away and call 911 or the power company first, then still take their details."
+  },
+  "pressure_washing": {
+    "trade_line": "a local pressure washing business (House washing, Driveways, Decks & fences, Roof soft wash, Gutter brightening, Commercial)",
+    "safety_line": ""
+  },
+  "handyman": {
+    "trade_line": "a local handyman business (Home repairs, Mounting & hanging, Furniture assembly, Painting touch-ups, Fixture swaps, Honey-do lists)",
+    "safety_line": ""
+  },
+  "junk_removal": {
+    "trade_line": "a local junk removal business (Furniture removal, Garage clean-outs, Appliance removal, Yard debris, Move-out clean-outs, Light demolition)",
+    "safety_line": ""
+  },
+  "fence": {
+    "trade_line": "a local fencing business (Wood fences, Vinyl & chain link, Fence repair, Gates, Farm & ranch, Staining & sealing)",
+    "safety_line": ""
+  },
+  "painting": {
+    "trade_line": "a local painting business (Interior painting, Exterior painting, Cabinet painting, Deck staining, Drywall repair, Commercial)",
+    "safety_line": ""
+  },
+  "concrete": {
+    "trade_line": "a local concrete business (Driveways, Patios, Sidewalks, Slabs, Repairs, Stamped & colored)",
+    "safety_line": ""
+  },
+  "_default": {
+    "trade_line": "a local home service business",
+    "safety_line": ""
+  },
+  "job_question": "What they need done, with details that help the owner give a quote (what, how big or how many, where on the property, anything urgent)",
+  "agent_id": "agent_2501m8156gm3fx9sq38wjxbdnyxs"
+}

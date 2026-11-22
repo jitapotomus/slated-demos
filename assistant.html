@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Sample AI receptionist</title>
+  <style>
+    :root{font:16px/1.6 "Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:#0f1f2e;background:#f5f7f9}
+    *{box-sizing:border-box}body{margin:0}main{max-width:640px;margin:0 auto;padding:32px 20px 180px}
+    .sample{display:inline-block;background:#f2b84b;padding:4px 12px;border-radius:999px;font-weight:700;font-size:14px}
+    h1{font-size:clamp(28px,6vw,42px);line-height:1.15;letter-spacing:-.025em;overflow-wrap:anywhere;margin:20px 0}
+    p{color:#556677}section{margin-top:24px;background:#fff;border:1px solid #e2e8ee;border-radius:14px;padding:20px}
+    #status{margin:0}elevenlabs-convai{display:block;max-width:100%}
+  </style>
+</head>
+<body><main>
+  <span class="sample">Sample</span>
+  <h1 id="heading">Hear the AI receptionist for your business</h1>
+  <p>This is a sample: the assistant answers missed calls, takes the details, and sends them to the owner. It never gives prices.</p>
+  <section><p id="status" role="status">Loading the sample assistant…</p><div id="assistant"></div></section>
+  <noscript><p>Turn on JavaScript to try the sample assistant.</p></noscript>
+</main>
+<script>
+  (async () => {
+    const query = new URLSearchParams(location.search);
+    const business = Array.from((query.get('b') || '').trim()).slice(0,80).join('') || 'your business';
+    document.getElementById('heading').textContent = 'Hear the AI receptionist for ' + business;
+    const status = document.getElementById('status');
+    try {
+      const response = await fetch('./assistant_trades.json');
+      if (!response.ok) throw new Error('Settings unavailable');
+      const data = await response.json(), key = query.get('t');
+      const candidate = Object.hasOwn(data, key) ? data[key] : null;
+      const trade = candidate && typeof candidate.trade_line === 'string' && typeof candidate.safety_line === 'string' ? candidate : data._default;
+      const widget = document.createElement('elevenlabs-convai');
+      widget.setAttribute('agent-id', data.agent_id);
+      widget.setAttribute('dynamic-variables', JSON.stringify({business_name:business,
+        trade_line:trade.trade_line, job_question:data.job_question, safety_line:trade.safety_line}));
+      document.getElementById('assistant').append(widget);
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+      script.async = true; script.type = 'text/javascript';
+      script.onload = () => { status.textContent = 'Tap the assistant to try a sample call. Allow your microphone when asked. No phone number needed.'; };
+      script.onerror = () => { status.textContent = 'The assistant could not load. Please reload and try again.'; };
+      document.head.append(script);
+    } catch {
+      status.textContent = 'The assistant could not load. Please reload and try again.';
+    }
+  })();
+</script>
+</body></html>
