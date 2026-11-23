@@ -1,0 +1,3 @@
+/* Hand-tuned for Christie's Car Spa (2026-11-23): soft aqua spa palette + lighter hero overlay. */
+body.trade-auto_detailing{--red:#2f7f86;--red-2:#246970;--gold:#8fd0c9}
+.hero-frame::after{background:linear-gradient(90deg,rgba(18,40,44,.78) 0%,rgba(18,40,44,.45) 45%,rgba(18,40,44,0) 80%)}
