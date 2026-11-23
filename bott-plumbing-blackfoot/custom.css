@@ -1,1 +1,4 @@
-/* Hand-tuned for Bott Plumbing (2026-11-23): bright look + Bingham County wording. Keep this file: it marks the demo as hand-tuned so rebuilds skip it. */
+/* Hand-tuned for Bott Plumbing (2026-11-23): bright look in forest green + cream gold (founder: navy/yellow felt "IKEA").
+   Keep this file: it marks the demo as hand-tuned so rebuilds skip it. */
+body{--navy:#1f4d3a;--navy-2:#163a2c;--navy-3:#2b6650;--sun:#e9c46a;--sun-2:#d4ab4c;--sky:#eef6f0;--sky-2:#dcebe0;
+  --ink:#1a2b23;--ink-2:#3e5248;--muted:#64776d;--line:#d5e3da;--star:#e2b04a}
