@@ -43,7 +43,7 @@ export function estimate(recipe, prices = {}, answers = {}) {
     } else {
       const option = f.options.find(o=>o.value===value), key = rule.prices[value];
       if (!key) continue;
-      const label = `${f.label}: ${option.label}`;
+      const label = `${f.label.replace(/[?:]$/,"")}: ${option.label}`;  // "What do you need: X", not "need?: X"
       if (rule.op === 'multiply' || rule.op === 'discount') {
         const subtotal = rule.scope ? lines.filter(l=>rule.scope.includes(l.key)).reduce((n,l)=>n+l.cents,0) : total;
         const factor = rule.op === 'discount' ? -p[key] : p[key]-10000;
@@ -69,6 +69,6 @@ export const estimateText = result => {
 export function answerText(recipe, answers) {
   return recipe.fields.map(f=> {
     const v = answers[f.key] ?? f.default;
-    return `${f.label}: ${f.type==='number' ? v+(f.unit ? ' '+f.unit : '') : f.options.find(o=>o.value===v)?.label}`;
+    return `${f.label.replace(/[?:]$/,"")}: ${f.type==='number' ? v+(f.unit ? ' '+f.unit : '') : f.options.find(o=>o.value===v)?.label}`;
   }).join('\n');
 }
