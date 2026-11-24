@@ -1,4 +1,21 @@
 'use strict';
+window.bookingReceiptText = (form, data, values, amount='') => {
+  if (!form.dataset.endpoint) return `This is a sample. Nothing was sent or saved. On your live site, ${form.dataset.business} would receive your request${amount ? ' and estimate of '+amount : ''}.`;
+  const first=(values.name || 'there').trim().split(/\s+/)[0];
+  let text=`Thanks, ${first}! ${form.dataset.business} got your request${amount ? ' and your estimate of '+amount : ''}. You'll hear back within ${data.response_time || '1 to 3 business days'}.`;
+  if(data.confirmation_email) text+=form.dataset.demo==='true' ? ' Demo: we emailed the copy to Slated Studio.' : ' We also emailed you a copy.';
+  else if(form.dataset.demo==='true')text+=' (Demo: this went to Slated Studio.)';
+  if(data.duplicate)text+=' Your request was already received; no second request was created.';
+  return text;
+};
+function receivedScreen(form,data,values) {
+  const title=document.createElement('h2'), text=document.createElement('p');title.textContent='Received!';text.textContent=window.bookingReceiptText(form,data,values);
+  if(data.booked)text.textContent+=` You're booked for ${data.booked} (${data.zone}).`;
+  form.replaceChildren(title,text);form.classList.add('booking-received');
+  const phone=data.phone || form.dataset.phone;
+  if(phone){const link=document.createElement('a');link.href='tel:'+phone.replace(/[^+0-9]/g,'');link.textContent='Call '+phone;form.append(link);}
+  title.tabIndex=-1;title.focus();
+}
 // Sample forms never make a network call. Live forms use only their configured endpoint.
 const dayText = day => new Intl.DateTimeFormat('en-US', {weekday:'short', month:'short', day:'numeric', timeZone:'UTC'}).format(new Date(day + 'T12:00:00Z'));
 const timeText = hm => { const [h, m] = hm.split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'am' : 'pm'}`; };
@@ -71,6 +88,7 @@ document.querySelectorAll('form.demo-form').forEach(form => {
     event.preventDefault();
     const result = form.querySelector('.form-result');
     if (!form.dataset.endpoint) {
+      if(form.dataset.v2==='true'){receivedScreen(form,{},Object.fromEntries(new FormData(form)));return;}
       result.textContent = 'This is a sample. On your live site, this request goes straight to your phone and email.';
       result.hidden = false;
       return;
@@ -90,6 +108,7 @@ document.querySelectorAll('form.demo-form').forEach(form => {
       const response = await fetch(endpoint.href, {method:'POST',credentials:'omit',headers:{'Content-Type':'application/json'},body:JSON.stringify(values)});
       const data = await response.json();
       if (!response.ok || !data.ok) throw new Error(data.error || 'Could not send. Please try again or call.');
+      if(form.dataset.v2==='true'){receivedScreen(form,data,values);return;}
       result.textContent = data.booked
         ? `You're booked for ${data.booked} (${data.zone}). ${form.dataset.business} will call if anything needs to change.`
         : `Thanks! ${form.dataset.business} got your request and will call you to confirm.`;

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Knox Details | Auto detailing in Knoxville, TN"><meta property="og:description" content="Auto detailing in Knoxville, TN. Book a free estimate with Knox Details online or call (865) 246-9783.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-bar.css"><script src="../assets/site.js" defer></script>
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Knox Details", "address": {"@type": "PostalAddress", "addressLocality": "Knoxville", "addressRegion": "TN"}, "telephone": "(865) 246-9783"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -18,9 +19,9 @@
 <div class="sample">Sample website made for Knox Details by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><nav><a href="#services">Services</a><a href="#about">About</a></nav><a class="logo" href="#"><b>Knox</b><small>Details</small></a><nav class="r"><a href="#faq">Questions</a><a href="tel:+18652469783">(865) 246-9783</a></nav></div></header>
 <section class="hero"><img src="../assets/img/det-interior.jpg" alt="">
-  <div class="hero-in"><h1>Let&#x27;s talk detailing.</h1><p>Share your plans in Knoxville and ask for a quote.</p></div>
+  <div class="hero-in"><h1>Let&#x27;s talk detailing.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><p>Share your plans in Knoxville and ask for a quote.</p></div>
 </section>
-<section class="barwrap" id="estimate"><div class="bar"><b>Book a free estimate</b><form data-business="Knox Details" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="Knox Details" class="demo-form f bar-form">
+<section class="barwrap" id="estimate"><div class="bar"><b>Book a free estimate</b><form data-v2="true" data-phone="(865) 246-9783" data-business="Knox Details" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="Knox Details" class="demo-form f bar-form">
       <input name="name" maxlength="120" placeholder="Your name" required autocomplete="name" aria-label="Name">
       <input name="phone" maxlength="40" type="tel" placeholder="Phone" required autocomplete="tel" aria-label="Phone">
       <select name="service" required aria-label="Service"><option>Full detail</option><option>Interior cleaning</option><option>Paint correction</option><option>Ceramic coating</option><option>Something else</option></select>
@@ -38,7 +39,7 @@
     </form></div></section>
 <section class="about" id="about"><div class="pol"><figure><img src="../assets/img/det-shine.jpg" alt="" loading="lazy"><figcaption>Knoxville</figcaption></figure><figure><img src="../assets/img/det-polish.jpg" alt="" loading="lazy"><figcaption>On the job</figcaption></figure><figure><img src="../assets/img/det-interior.jpg" alt="" loading="lazy"><figcaption>Happy home</figcaption></figure></div>
   <div class="about-t"><h2>A detailer you can actually reach</h2><p>Here&#x27;s what you can expect when you call.</p><p class="honest">We&#x27;ll tell you what your car really needs. No upselling packages you don&#x27;t need.</p><a class="link" href="tel:+18652469783">Call (865) 246-9783 <svg><use href="#arrow"/></svg></a></div></section>
-<section class="services" id="services"><h2>Detailing, inside and out</h2><div class="tiles"><a class="tile" href="#estimate"><img src="../assets/img/det-foam.jpg" alt="" loading="lazy"><h3>Full detail <svg><use href="#arrow"/></svg></h3></a><a class="tile" href="#estimate"><img src="../assets/img/det-interior.jpg" alt="" loading="lazy"><h3>Interior cleaning <svg><use href="#arrow"/></svg></h3></a><a class="tile" href="#estimate"><img src="../assets/img/det-polish.jpg" alt="" loading="lazy"><h3>Paint correction <svg><use href="#arrow"/></svg></h3></a><a class="tile" href="#estimate"><img src="../assets/img/det-beads.jpg" alt="" loading="lazy"><h3>Ceramic coating <svg><use href="#arrow"/></svg></h3></a></div></section>
+<section class="services" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>Detailing, inside and out</h2><div class="tiles"><a class="tile" href="#estimate"><img src="../assets/img/det-foam.jpg" alt="" loading="lazy"><h3>Full detail <svg><use href="#arrow"/></svg></h3></a><a class="tile" href="#estimate"><img src="../assets/img/det-interior.jpg" alt="" loading="lazy"><h3>Interior cleaning <svg><use href="#arrow"/></svg></h3></a><a class="tile" href="#estimate"><img src="../assets/img/det-polish.jpg" alt="" loading="lazy"><h3>Paint correction <svg><use href="#arrow"/></svg></h3></a><a class="tile" href="#estimate"><img src="../assets/img/det-beads.jpg" alt="" loading="lazy"><h3>Ceramic coating <svg><use href="#arrow"/></svg></h3></a></div></section>
 <section class="how"><h2>Four simple steps to a fresh car</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
       <li><b>We look it over</b><span>We check the car with you and agree on what to do.</span></li>
@@ -53,5 +54,6 @@
   <p class="credit">&copy; 2026 Knox Details · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+18652469783">Call (865) 246-9783</a><a href="#estimate">Free estimate</a></div>
+<dialog id="instant-estimate" data-trade="auto_detailing" aria-label="Instant estimate"></dialog>
 </body>
 </html>

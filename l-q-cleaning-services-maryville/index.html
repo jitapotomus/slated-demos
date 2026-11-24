@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="L&amp;Q Cleaning Services | House cleaning in Maryville, TN"><meta property="og:description" content="House cleaning in Maryville, TN. Book a free estimate with L&amp;Q Cleaning Services online or call (865) 431-4255.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-poster.css"><script src="../assets/site.js" defer></script>
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "L\u0026Q Cleaning Services", "address": {"@type": "PostalAddress", "addressLocality": "Maryville", "addressRegion": "TN"}, "telephone": "(865) 431-4255", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 5.0, "reviewCount": 6}}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -18,12 +19,12 @@
 <div class="sample">Sample website made for L&amp;Q Cleaning Services by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>L&amp;Q</b><small>Cleaning Services</small></a><a class="hcall" href="tel:+18654314255">(865) 431-4255</a></div></header>
 <section class="hero">
-  <h1>Let&#x27;s talk house cleaning.</h1>
+  <h1>Let&#x27;s talk house cleaning.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-row"><p class="lead">Share your plans in Maryville and ask for a quote.</p><a class="btn" href="#estimate">Free estimate <svg><use href="#arrow"/></svg></a></div>
   <img src="../assets/img/cl-mop.jpg" alt="">
 </section>
 <div class="ticker" aria-hidden="true"><div>Maryville · Knoxville · Farragut · Powell · Oak Ridge · Alcoa · Lenoir City · Seymour · Halls · Maryville · Knoxville · Farragut · Powell · Oak Ridge · Alcoa · Lenoir City · Seymour · Halls · </div></div>
-<section class="list" id="services"><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/cl-counter.jpg" alt="Regular cleaning" loading="lazy"><div><h3>Regular cleaning</h3><p>Weekly or every-other-week cleaning for the rooms you use most.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/cl-sink.jpg" alt="Deep cleaning" loading="lazy"><div><h3>Deep cleaning</h3><p>A top-to-bottom clean for dirt that builds up over time.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/cl-kitchen.jpg" alt="Move-in &amp; move-out" loading="lazy"><div><h3>Move-in &amp; move-out</h3><p>Empty homes cleaned before you move in or after you leave.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/cl-vacuum.jpg" alt="Floors &amp; carpets" loading="lazy"><div><h3>Floors &amp; carpets</h3><p>Vacuuming, mopping and floors done with care for the finish.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="list" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/cl-counter.jpg" alt="Regular cleaning" loading="lazy"><div><h3>Regular cleaning</h3><p>Weekly or every-other-week cleaning for the rooms you use most.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/cl-sink.jpg" alt="Deep cleaning" loading="lazy"><div><h3>Deep cleaning</h3><p>A top-to-bottom clean for dirt that builds up over time.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/cl-kitchen.jpg" alt="Move-in &amp; move-out" loading="lazy"><div><h3>Move-in &amp; move-out</h3><p>Empty homes cleaned before you move in or after you leave.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/cl-vacuum.jpg" alt="Floors &amp; carpets" loading="lazy"><div><h3>Floors &amp; carpets</h3><p>Vacuuming, mopping and floors done with care for the finish.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="band"><img src="../assets/img/cl-mop.jpg" alt="" loading="lazy"><div><h2>We&#x27;ll tell you what a clean really needs. No upselling extras you don&#x27;t want.</h2><p class="rated">Rated 5.0 on Google from 6 reviews</p></div></section>
 <section class="how"><h2>Four simple steps to a clean home</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -31,7 +32,7 @@
       <li><b>You get a clear price</b><span>Before any work starts, with no pressure to say yes.</span></li>
       <li><b>Your home, treated with care</b><span>We treat your things and your space like our own.</span></li>
     </ol></section>
-<section class="book" id="estimate"><div><h2>Let&#x27;s plan your clean</h2><a class="big" href="tel:+18654314255">(865) 431-4255</a></div><form data-business="L&amp;Q Cleaning Services" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="L&amp;Q cleaning services" class="demo-form f">
+<section class="book" id="estimate"><div><h2>Let&#x27;s plan your clean</h2><a class="big" href="tel:+18654314255">(865) 431-4255</a></div><form data-v2="true" data-phone="(865) 431-4255" data-business="L&amp;Q Cleaning Services" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="L&amp;Q cleaning services" class="demo-form f">
       <div class="two"><input name="name" maxlength="120" placeholder="Your name" required autocomplete="name" aria-label="Name"><input name="phone" maxlength="40" type="tel" placeholder="Phone" required autocomplete="tel" aria-label="Phone"></div>
       <input type="email" name="email" maxlength="254" placeholder="Email (optional)" autocomplete="email" aria-label="Email">
       <input name="address" maxlength="250" placeholder="Home address" autocomplete="street-address" aria-label="Address">
@@ -50,5 +51,6 @@
   <p class="credit">&copy; 2026 L&amp;Q Cleaning Services · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+18654314255">Call (865) 431-4255</a><a href="#estimate">Free estimate</a></div>
+<dialog id="instant-estimate" data-trade="house_cleaning" aria-label="Instant estimate"></dialog>
 </body>
 </html>

@@ -19,14 +19,6 @@ body, body.trade-pressure_washing, body.pressure_washing {
   --vibe-light: #e4e7eb;
   --muted: color-mix(in srgb,var(--ink) 66%,var(--paper));
   --line: color-mix(in srgb,var(--ink) 16%,var(--paper));
-  --accent: #1f3b5c;
-  --gold: #e4e7eb;
-  --accent-dark: #19304b;
-  --accent-soft: #e4e7eb;
-  --hero-a: #111c2b;
-  --hero-b: None;
-  --soft: #e4e7eb;
 }
 body .btn-accent,body .btn-o,body .btn-red,body .btn-gold,body .btn-sun {background:var(--button);color:var(--button-ink);border-color:var(--button)}
 body .btn-accent:hover,body .btn-o:hover,body .btn-red:hover,body .btn-gold:hover,body .btn-sun:hover {background:var(--button-hover);color:var(--button-ink);border-color:var(--button-hover)}
-body {background:var(--paper);color:var(--ink)}
