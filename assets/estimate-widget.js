@@ -75,7 +75,7 @@ if (panel) {
       for(const [key,label,type,required,max] of [['name','Your name','text',true,120],['phone','Phone','tel',true,40],['email','Email (optional)','email',false,254],['address','Address (optional)','text',false,250],['day','Preferred day (optional)','date',false,10]]) {
         const row=el('label',label), input=el('input','',{name:key,type,'aria-label':label,maxlength:max});
         input.value=contacts[key] || '';input.required=required;
-        if(key==='phone')input.pattern='[+() 0-9.\\-]{10,40}';
+        if(key==='phone')input.pattern='[0-9\\s\\(\\)\\+\\.\\-]{10,40}';  // every symbol escaped: browsers check patterns in strict (v) mode
         if(key==='day') {input.min=new Date(Date.now()-86400000).toISOString().slice(0,10);input.max=new Date(Date.now()+120*86400000).toISOString().slice(0,10);}
         input.addEventListener('input',()=>{contacts[key]=input.value;});row.append(input);content.append(row);
       }
