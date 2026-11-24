@@ -1,0 +1,24 @@
+/* Palette 5: Plum & gold. Loaded after look/trade defaults. */
+body, body.trade-handyman, body.handyman {
+  --brand: #5b2a4d;
+  --brand-dark: #4a223f;
+  --brand-ink: #ffffff;
+  --hot: #86570a;
+  --dark: #24121f;
+  --paper: #faf6f2;
+  --ink: #1f171c;
+  --button: #5b2a4d;
+  --button-hover: #4a223f;
+  --button-ink: #ffffff;
+  --char: #24121f;
+  --link: #86570a;
+  --theme-bg: #faf6f2;
+  --theme-ink: #1f171c;
+  --accent-safe: #5b2a4d;
+  --accent-safe-hover: #4a223f;
+  --vibe-light: #ebe5e9;
+  --muted: color-mix(in srgb,var(--ink) 66%,var(--paper));
+  --line: color-mix(in srgb,var(--ink) 16%,var(--paper));
+}
+body .btn-accent,body .btn-o,body .btn-red,body .btn-gold,body .btn-sun {background:var(--button);color:var(--button-ink);border-color:var(--button)}
+body .btn-accent:hover,body .btn-o:hover,body .btn-red:hover,body .btn-gold:hover,body .btn-sun:hover {background:var(--button-hover);color:var(--button-ink);border-color:var(--button-hover)}

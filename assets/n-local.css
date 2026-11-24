@@ -1,0 +1,70 @@
+/* Local: loud and confident local trade site. Condensed caps, offer bar, chunky service buttons. */
+body{font-family:var(--grot)}
+h1,h2,.logo b,.btn,.call a{font-family:var(--cond);text-transform:uppercase;letter-spacing:.005em}
+.offer{background:var(--hot);color:#fff;text-align:center;font-weight:700;padding:9px var(--gut);font-size:15px}
+.offer a{text-decoration:underline;text-underline-offset:3px}
+header{background:var(--dark);color:#fff}
+.hwrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px var(--gut)}
+.logo b{font-size:2rem;font-weight:700}
+.hact{display:flex;align-items:center;gap:22px}
+.hphone{display:grid;text-decoration:none;text-align:right;font:700 1.7rem/1 var(--cond)}
+.hphone small{font:600 11px var(--grot);letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:4px}
+.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:1.25rem;padding:13px 26px;border:3px solid var(--brand);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.hot{background:var(--hot);border-color:var(--hot)}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.hero{position:relative;isolation:isolate;color:#fff;padding:clamp(56px,8vw,110px) var(--gut) 0;text-align:center}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,36,32,.82),rgba(23,36,32,.92));z-index:-1}
+.hero h1{font-size:clamp(3rem,7.6vw,6.6rem);line-height:.92;max-width:16ch;margin:0 auto}
+.where{display:inline-block;margin-top:22px;background:var(--brand);font:700 1.3rem var(--cond);text-transform:uppercase;padding:8px 18px}
+.lead{max-width:52ch;margin:20px auto 0;font-size:1.1rem;opacity:.9}
+.acts{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero .rated{margin-top:16px}
+.buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1200px;margin:clamp(40px,6vw,72px) auto 0;transform:translateY(40px)}
+.buttons .tile{display:flex;align-items:center;gap:14px;background:#fff;color:var(--dark);padding:12px;border-bottom:5px solid var(--hot);text-align:left;transition:transform .15s}
+.buttons .tile:hover{transform:translateY(-3px)}
+.buttons .tile img{width:64px;height:64px;flex:none}
+.buttons .tile h3{font:700 1.3rem/1.05 var(--cond);text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:8px;flex:1}
+.alert{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);margin-top:100px;background:var(--hot);color:#fff}
+.alert img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.alert>div{padding:clamp(36px,5vw,64px) var(--gut)}
+.alert .k{font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+.alert h2{font-size:clamp(2.4rem,4.6vw,4rem);line-height:.95;margin:8px 0 14px}
+.alert p{max-width:46ch}
+.alert .btn{background:var(--dark);border-color:var(--dark);margin-top:24px}
+.services,.why{padding:clamp(56px,8vw,104px) var(--gut)}
+.services h2,.why h2,.book h2{font-size:clamp(2.4rem,4.4vw,3.8rem);line-height:.95;color:var(--dark)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:36px}
+.cards .svc{display:grid;grid-template-columns:200px 1fr;border:3px solid var(--dark);background:#fff;transition:border-color .2s}
+.cards .svc:hover{border-color:var(--hot)}
+.cards .svc img{height:100%}
+.cards .svc div{padding:22px}
+.cards h3{font:700 1.7rem/1 var(--cond);text-transform:uppercase}
+.cards p{color:var(--muted);margin:8px 0 12px;font-size:15px}
+.cards .more{color:var(--hot);text-transform:uppercase}
+.why{background:var(--dark);color:#fff}
+.why h2{color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:34px}
+.why-grid div{border-top:5px solid var(--hot);padding-top:18px}
+.why-grid b{font:700 1.5rem var(--cond);text-transform:uppercase}
+.why-grid p{opacity:.8;margin-top:6px}
+.book{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);padding:clamp(56px,8vw,104px) var(--gut)}
+.book-in>p{color:var(--muted);margin:8px 0 20px}
+.f input,.f select,.f textarea{border:2px solid var(--dark)}
+.f button{font:700 1.3rem var(--cond);text-transform:uppercase;background:var(--hot)}
+.faq h2{font-size:2.4rem}
+.faq details{border-bottom:2px solid var(--dark);padding:16px 0}
+.faq details p{color:var(--muted)}
+.call{background:var(--brand);color:#fff;text-align:center;padding:56px var(--gut)}
+.call p{font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.call a{display:block;font-size:clamp(3rem,9vw,7rem);font-weight:700;line-height:1;text-decoration:none;margin-top:8px}
+@media (max-width:900px){
+  .hphone{display:none}
+  .buttons{grid-template-columns:repeat(2,minmax(0,1fr));transform:none;padding-bottom:40px}
+  .buttons .tile img{display:none}
+  .buttons .tile h3{min-width:0;font-size:1.1rem}
+  .alert{margin-top:0}
+  .alert,.cards,.why-grid,.book{grid-template-columns:minmax(0,1fr)}
+  .cards .svc{grid-template-columns:110px 1fr}
+}

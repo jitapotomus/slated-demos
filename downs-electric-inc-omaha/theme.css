@@ -1,0 +1,24 @@
+/* Palette 2: Navy & amber. Loaded after look/trade defaults. */
+body, body.trade-electrical, body.electrical {
+  --brand: #1f3b5c;
+  --brand-dark: #19304b;
+  --brand-ink: #ffffff;
+  --hot: #a8520c;
+  --dark: #111c2b;
+  --paper: #f5f6f8;
+  --ink: #141a22;
+  --button: #1f3b5c;
+  --button-hover: #19304b;
+  --button-ink: #ffffff;
+  --char: #111c2b;
+  --link: #a8520c;
+  --theme-bg: #f5f6f8;
+  --theme-ink: #141a22;
+  --accent-safe: #1f3b5c;
+  --accent-safe-hover: #19304b;
+  --vibe-light: #e4e7eb;
+  --muted: color-mix(in srgb,var(--ink) 66%,var(--paper));
+  --line: color-mix(in srgb,var(--ink) 16%,var(--paper));
+}
+body .btn-accent,body .btn-o,body .btn-red,body .btn-gold,body .btn-sun {background:var(--button);color:var(--button-ink);border-color:var(--button)}
+body .btn-accent:hover,body .btn-o:hover,body .btn-red:hover,body .btn-gold:hover,body .btn-sun:hover {background:var(--button-hover);color:var(--button-ink);border-color:var(--button-hover)}

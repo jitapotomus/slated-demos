@@ -1,0 +1,32 @@
+/* Palette 6: Slate & blue. Loaded after look/trade defaults. */
+body, body.trade-pressure_washing, body.pressure_washing {
+  --brand: #334155;
+  --brand-dark: #293545;
+  --brand-ink: #ffffff;
+  --hot: #1d4ed8;
+  --dark: #0f172a;
+  --paper: #f8fafc;
+  --ink: #0f172a;
+  --button: #334155;
+  --button-hover: #293545;
+  --button-ink: #ffffff;
+  --char: #0f172a;
+  --link: #1d4ed8;
+  --theme-bg: #f8fafc;
+  --theme-ink: #0f172a;
+  --accent-safe: #334155;
+  --accent-safe-hover: #293545;
+  --vibe-light: #e6e8ea;
+  --muted: color-mix(in srgb,var(--ink) 66%,var(--paper));
+  --line: color-mix(in srgb,var(--ink) 16%,var(--paper));
+  --accent: #334155;
+  --gold: #e6e8ea;
+  --accent-dark: #293545;
+  --accent-soft: #e6e8ea;
+  --hero-a: #0f172a;
+  --hero-b: None;
+  --soft: #e6e8ea;
+}
+body .btn-accent,body .btn-o,body .btn-red,body .btn-gold,body .btn-sun {background:var(--button);color:var(--button-ink);border-color:var(--button)}
+body .btn-accent:hover,body .btn-o:hover,body .btn-red:hover,body .btn-gold:hover,body .btn-sun:hover {background:var(--button-hover);color:var(--button-ink);border-color:var(--button-hover)}
+body {background:var(--paper);color:var(--ink)}

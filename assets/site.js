@@ -7,6 +7,7 @@ const fixBorders = row => row.querySelectorAll('span').forEach(span => { span.st
 // Pro sites with online booking: a day strip + time buttons. If anything fails,
 // the normal "Best day / Best time" fields stay and the form sends a request.
 async function slotPicker(form) {
+  if (form.dataset.native) return;
   const day = form.elements.namedItem('day'), time = form.querySelector('[name="time"]');
   const url = new URL('/slots', form.dataset.endpoint);
   url.searchParams.set('site', form.dataset.site);
@@ -59,12 +60,14 @@ async function slotPicker(form) {
   const submit = form.querySelector('button[type="submit"]'); if (submit) submit.textContent = 'Book this time';
 }
 document.querySelectorAll('form.demo-form').forEach(form => {
+  if (form.dataset.native) return;
   if (form.dataset.slots === 'true' && form.dataset.endpoint) slotPicker(form);
   const loaded = Date.now();
   form.elements.namedItem('t').value = String(loaded);
   const button = form.querySelector('button[type="submit"]');
   button.disabled = false;
   form.addEventListener('submit', async event => {
+    if (form.dataset.native) return;
     event.preventDefault();
     const result = form.querySelector('.form-result');
     if (!form.dataset.endpoint) {

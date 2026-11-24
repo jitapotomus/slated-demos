@@ -1,0 +1,24 @@
+/* Palette 3: Charcoal & red. Loaded after look/trade defaults. */
+body, body.trade-garage_door, body.garage_door {
+  --brand: #2b2d31;
+  --brand-dark: #232428;
+  --brand-ink: #ffffff;
+  --hot: #b3261e;
+  --dark: #141517;
+  --paper: #f6f5f3;
+  --ink: #161616;
+  --button: #2b2d31;
+  --button-hover: #232428;
+  --button-ink: #ffffff;
+  --char: #141517;
+  --link: #b3261e;
+  --theme-bg: #f6f5f3;
+  --theme-ink: #161616;
+  --accent-safe: #2b2d31;
+  --accent-safe-hover: #232428;
+  --vibe-light: #e5e5e6;
+  --muted: color-mix(in srgb,var(--ink) 66%,var(--paper));
+  --line: color-mix(in srgb,var(--ink) 16%,var(--paper));
+}
+body .btn-accent,body .btn-o,body .btn-red,body .btn-gold,body .btn-sun {background:var(--button);color:var(--button-ink);border-color:var(--button)}
+body .btn-accent:hover,body .btn-o:hover,body .btn-red:hover,body .btn-gold:hover,body .btn-sun:hover {background:var(--button-hover);color:var(--button-ink);border-color:var(--button-hover)}

@@ -1,0 +1,44 @@
+/* Letter: personal and friendly. Polaroids, a short note from the team in one narrow column, a paper booking card. */
+body{background:#f4efe6}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em}
+.hwrap{display:flex;justify-content:space-between;align-items:center;padding:22px var(--gut);border-bottom:1px dashed #cdbfa8}
+.logo b{font:600 1.6rem/1 var(--serif)}
+.hcall{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.btn{display:inline-block;margin-top:26px;background:var(--brand);color:#fff;padding:15px 26px;border-radius:6px;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--brand-dark)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center;padding:clamp(48px,7vw,104px) var(--gut)}
+.pol{position:relative;height:clamp(360px,40vw,560px)}
+.pol figure{position:absolute;width:62%;background:#fff;padding:12px 12px 44px;box-shadow:0 20px 40px -22px rgba(60,40,20,.45)}
+.pol figure:nth-child(1){left:0;top:4%;transform:rotate(-5deg)}
+.pol figure:nth-child(2){right:0;top:12%;transform:rotate(4deg)}
+.pol figure:nth-child(3){left:18%;bottom:0;transform:rotate(-1.5deg)}
+.pol img{aspect-ratio:1;width:100%;object-fit:cover}
+.pol figcaption{font:italic 500 16px var(--serif);margin-top:10px;color:#6d5b45}
+.hero h1{font-size:clamp(2.6rem,5vw,4.6rem);line-height:1.04}
+.hero-t p{font-size:1.15rem;color:var(--muted);margin-top:18px;max-width:38ch}
+.note{max-width:640px;margin:0 auto;padding:clamp(40px,6vw,80px) var(--gut);font:400 1.25rem/1.7 var(--serif);color:#3b352d}
+.note p+p{margin-top:18px}
+.note .hi{font-size:1.9rem;line-height:1.2;color:var(--ink)}
+.note .sig{font-style:italic;color:var(--hot);margin-top:28px}
+.list,.how,.faq{max-width:980px;margin:0 auto;padding:clamp(40px,6vw,80px) var(--gut)}
+.list h2,.how h2,.faq h2,.paper h2{font-size:clamp(2rem,3.4vw,2.9rem)}
+.items{display:grid;gap:0;margin-top:26px}
+.items .svc{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;padding:18px 0;border-top:1px dashed #cdbfa8}
+.items .svc img{aspect-ratio:1;border-radius:4px}
+.items h3{font-size:1.5rem}
+.items p{color:var(--muted);margin:4px 0 8px}
+.items .more{color:var(--hot)}
+.steps li{border-top:1px dashed #cdbfa8}
+.steps li::before{color:var(--hot);font-style:italic}
+.book{padding:clamp(40px,6vw,80px) var(--gut)}
+.paper{max-width:760px;margin:0 auto;background:#fffdf8;padding:clamp(28px,4vw,56px);box-shadow:0 24px 50px -30px rgba(60,40,20,.5);background-image:repeating-linear-gradient(#fffdf8 0 31px,#efe6d6 31px 32px)}
+.paper>p{color:var(--muted);margin:10px 0 22px}
+.f input,.f select,.f textarea{background:#fffdf8;border-color:#d8ccb7;border-radius:6px}
+.f button{border-radius:6px}
+.faq details{border-top:1px dashed #cdbfa8;padding:16px 0}
+.faq details p{color:var(--muted)}
+footer{background:#2d261e}
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .items .svc{grid-template-columns:90px 1fr}
+}
