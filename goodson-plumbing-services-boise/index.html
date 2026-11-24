@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Goodson Plumbing Services | Plumbing in Boise, ID"><meta property="og:description" content="Plumbing in Boise, ID. Book a free estimate with Goodson Plumbing Services online or call (208) 629-4278.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-poster.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Goodson Plumbing Services", "address": {"@type": "PostalAddress", "addressLocality": "Boise", "addressRegion": "ID"}, "telephone": "(208) 629-4278"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -19,12 +19,12 @@
 <div class="sample">Sample website made for Goodson Plumbing Services by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Goodson</b><small>Plumbing Services</small></a><a class="hcall" href="tel:+12086294278">(208) 629-4278</a></div></header>
 <section class="hero">
-  <h1>Plumbing in Boise.</h1>
+  <h1>Plumbing in Boise.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-row"><p class="lead">Tell us what you need and ask about the next step.</p><a class="btn" href="#estimate">Free estimate <svg><use href="#arrow"/></svg></a></div>
   <img src="../assets/img/plumb-tech.jpg" alt="">
 </section>
 <div class="ticker" aria-hidden="true"><div>Boise · Meridian · Nampa · Eagle · Kuna · Star · Garden City · Caldwell · Middleton · Boise · Meridian · Nampa · Eagle · Kuna · Star · Garden City · Caldwell · Middleton · </div></div>
-<section class="list" id="services"><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="list" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="band"><img src="../assets/img/plumb-under-sink.jpg" alt="" loading="lazy"><div><h2>If a small repair will do, we&#x27;ll tell you. No pushing work you don&#x27;t need.</h2></div></section>
 <section class="how"><h2>Four simple steps to working plumbing</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -51,6 +51,6 @@
   <p class="credit">&copy; 2026 Goodson Plumbing Services · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+12086294278">Call (208) 629-4278</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="plumbing" aria-label="Instant estimate"></dialog>
 </body>
 </html>

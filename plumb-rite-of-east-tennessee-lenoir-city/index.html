@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Plumb Rite Of East Tennessee | Plumbing in Lenoir City, TN"><meta property="og:description" content="Plumbing in Lenoir City, TN. Book a free estimate with Plumb Rite Of East Tennessee online or call (865) 635-6202.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-poster.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Plumb Rite Of East Tennessee", "address": {"@type": "PostalAddress", "addressLocality": "Lenoir City", "addressRegion": "TN"}, "telephone": "(865) 635-6202"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -19,12 +19,12 @@
 <div class="sample">Sample website made for Plumb Rite Of East Tennessee by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Plumb Rite Of East Tennessee</b><small>Lenoir City, TN</small></a><a class="hcall" href="tel:+18656356202">(865) 635-6202</a></div></header>
 <section class="hero">
-  <h1>Your next project starts with a call.</h1>
+  <h1>Your next project starts with a call.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-row"><p class="lead">Ask about plumbing in Lenoir City or send a quote request.</p><a class="btn" href="#estimate">Free estimate <svg><use href="#arrow"/></svg></a></div>
   <img src="../assets/img/plumb-tech.jpg" alt="">
 </section>
 <div class="ticker" aria-hidden="true"><div>Lenoir City · Knoxville · Farragut · Maryville · Powell · Oak Ridge · Alcoa · Seymour · Halls · Lenoir City · Knoxville · Farragut · Maryville · Powell · Oak Ridge · Alcoa · Seymour · Halls · </div></div>
-<section class="list" id="services"><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="list" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="band"><img src="../assets/img/plumb-under-sink.jpg" alt="" loading="lazy"><div><h2>If a small repair will do, we&#x27;ll tell you. No pushing work you don&#x27;t need.</h2></div></section>
 <section class="how"><h2>Four simple steps to working plumbing</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -51,6 +51,6 @@
   <p class="credit">&copy; 2026 Plumb Rite Of East Tennessee · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+18656356202">Call (865) 635-6202</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="plumbing" aria-label="Instant estimate"></dialog>
 </body>
 </html>

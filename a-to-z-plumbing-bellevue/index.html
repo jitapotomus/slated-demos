@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="A To Z Plumbing | Plumbing in Bellevue, NE"><meta property="og:description" content="Plumbing in Bellevue, NE. Book a free estimate with A To Z Plumbing online or call (402) 612-6888.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-split.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "A To Z Plumbing", "address": {"@type": "PostalAddress", "addressLocality": "Bellevue", "addressRegion": "NE"}, "telephone": "(402) 612-6888"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -22,7 +22,7 @@
   <a class="hcall" href="tel:+14026126888"><svg><use href="#phone"/></svg>(402) 612-6888</a></div></header>
 <section class="hero">
   <div class="hero-text">
-    <h1>Your next project starts with a call.</h1>
+    <h1>Your next project starts with a call.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
     <p class="lead">Ask about plumbing in Bellevue or send a quote request.</p>
     <div class="acts"><a class="btn" href="#estimate">Book a free estimate</a><a class="tel" href="tel:+14026126888">or call (402) 612-6888</a></div>
     
@@ -34,7 +34,7 @@
   <div><b>Straight answers</b><span>If a small repair will do, we&#x27;ll tell you. No pushing work you don&#x27;t need.</span></div>
   <div><b>Based in Bellevue</b><span>Your neighbors, not a call center.</span></div>
 </section>
-<section class="services" id="services"><h2>Plumbing help, start to finish</h2><div class="zig"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="services" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>Plumbing help, start to finish</h2><div class="zig"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="how" id="how"><div class="how-in"><h2>Four simple steps to working plumbing</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
       <li><b>We find the cause</b><span>We check the problem and show you what we found.</span></li>
@@ -62,6 +62,6 @@
   <p class="credit">&copy; 2026 A To Z Plumbing · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+14026126888">Call (402) 612-6888</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="plumbing" aria-label="Instant estimate"></dialog>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Superior Water &amp; Air | Plumbing in Garden City, ID"><meta property="og:description" content="Plumbing in Garden City, ID. Book a free estimate with Superior Water &amp; Air online or call (208) 995-2701.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-magazine.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Superior Water \u0026 Air", "address": {"@type": "PostalAddress", "addressLocality": "Garden City", "addressRegion": "ID"}, "telephone": "(208) 995-2701"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -18,9 +18,9 @@
 </svg>
 <div class="sample">Sample website made for Superior Water &amp; Air by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Superior</b><small>Water &amp; Air</small></a><span class="issue">Plumbing · Garden City, ID</span><a class="hcall" href="tel:+12089952701">(208) 995-2701</a></div></header>
-<section class="hero"><h1>Let&#x27;s talk plumbing.</h1>
+<section class="hero"><h1>Let&#x27;s talk plumbing.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-grid"><div class="side"><p>Share your plans in Garden City and ask for a quote.</p><a class="btn" href="#estimate">Book a free estimate</a></div><img src="../assets/img/plumb-kitchen.jpg" alt=""></div></section>
-<section class="index" id="services"><h2>Services</h2><div class="entries"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="index" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>Services</h2><div class="entries"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="pull"><img src="../assets/img/plumb-under-sink.jpg" alt="" loading="lazy"><blockquote>If a small repair will do, we&#x27;ll tell you. No pushing work you don&#x27;t need.</blockquote></section>
 <section class="how"><div><h2>Four simple steps to working plumbing</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -46,6 +46,6 @@
   <p class="credit">&copy; 2026 Superior Water &amp; Air · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+12089952701">Call (208) 995-2701</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="plumbing" aria-label="Instant estimate"></dialog>
 </body>
 </html>

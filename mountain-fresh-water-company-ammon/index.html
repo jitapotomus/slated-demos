@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Mountain Fresh Water Company | Plumbing in Ammon, ID"><meta property="og:description" content="Plumbing in Ammon, ID. Book a free estimate with Mountain Fresh Water Company online or call (208) 522-2267.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-haze.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Mountain Fresh Water Company", "address": {"@type": "PostalAddress", "addressLocality": "Ammon", "addressRegion": "ID"}, "telephone": "(208) 522-2267"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -18,9 +18,9 @@
 </svg>
 <div class="sample">Sample website made for Mountain Fresh Water Company by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Mountain Fresh</b><small>Water Company</small></a><nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav><a class="btn sm" href="#estimate">Free estimate</a></div></header>
-<section class="hero"><img src="../assets/img/plumb-under-sink.jpg" alt=""><div class="hero-in"><h1>Make room for a fresh start.</h1><p>Start with a conversation about plumbing in Ammon.</p>
+<section class="hero"><img src="../assets/img/plumb-under-sink.jpg" alt=""><div class="hero-in"><h1>Make room for a fresh start.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><p>Start with a conversation about plumbing in Ammon.</p>
   <div class="acts"><a class="btn" href="#estimate">Get a free estimate</a><a class="pill" href="tel:+12085222267"><svg><use href="#phone"/></svg>(208) 522-2267</a></div></div></section>
-<section class="services" id="services"><div class="head"><h2>Plumbing help, start to finish</h2><p>If a small repair will do, we&#x27;ll tell you. No pushing work you don&#x27;t need.</p></div><div class="row"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="services" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><div class="head"><h2>Plumbing help, start to finish</h2><p>If a small repair will do, we&#x27;ll tell you. No pushing work you don&#x27;t need.</p></div><div class="row"><a class="svc" href="#estimate"><img src="../assets/img/plumb-wrench.jpg" alt="Leak repair" loading="lazy"><div><h3>Leak repair</h3><p>Dripping taps, leaking pipes and wet spots, found and fixed.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-under-sink.jpg" alt="Drain cleaning" loading="lazy"><div><h3>Drain cleaning</h3><p>Slow sinks, clogged showers and backed-up toilets, cleared.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-heater.jpg" alt="Water heaters" loading="lazy"><div><h3>Water heaters</h3><p>No hot water? Repairs and new water heaters, sized for your home.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/plumb-bath.jpg" alt="Fixtures &amp; toilets" loading="lazy"><div><h3>Fixtures &amp; toilets</h3><p>New taps, toilets, sinks and showers, installed neatly.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="how" id="how"><h2>Four simple steps to working plumbing</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
       <li><b>We find the cause</b><span>We check the problem and show you what we found.</span></li>
@@ -46,6 +46,6 @@
   <p class="credit">&copy; 2026 Mountain Fresh Water Company · Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+12085222267">Call (208) 522-2267</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="plumbing" aria-label="Instant estimate"></dialog>
 </body>
 </html>
