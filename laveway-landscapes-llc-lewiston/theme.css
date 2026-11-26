@@ -1,0 +1,24 @@
+/* Palette 4: Teal & coral. Loaded after look/trade defaults. */
+body, body.trade-concrete, body.concrete {
+  --brand: #1f5f5b;
+  --brand-dark: #194d4a;
+  --brand-ink: #ffffff;
+  --hot: #b83d10;
+  --dark: #0f2b29;
+  --paper: #f3f7f6;
+  --ink: #132322;
+  --button: #1f5f5b;
+  --button-hover: #194d4a;
+  --button-ink: #ffffff;
+  --char: #0f2b29;
+  --link: #b83d10;
+  --theme-bg: #f3f7f6;
+  --theme-ink: #132322;
+  --accent-safe: #1f5f5b;
+  --accent-safe-hover: #194d4a;
+  --vibe-light: #e4ebeb;
+  --muted: color-mix(in srgb,var(--ink) 66%,var(--paper));
+  --line: color-mix(in srgb,var(--ink) 16%,var(--paper));
+}
+body .btn-accent,body .btn-o,body .btn-red,body .btn-gold,body .btn-sun {background:var(--button);color:var(--button-ink);border-color:var(--button)}
+body .btn-accent:hover,body .btn-o:hover,body .btn-red:hover,body .btn-gold:hover,body .btn-sun:hover {background:var(--button-hover);color:var(--button-ink);border-color:var(--button-hover)}
