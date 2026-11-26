@@ -200,7 +200,8 @@ function mount(el, id, opts = {}) {
         else { const i = $('[name=' + f.k + ']', form); i.value = v; const rv = $('[data-r=' + f.k + ']', el); if (rv) rv.textContent = v + (f.unit || ''); }
       }
       run();
-      stat.textContent = Object.keys(picks).length ? (d.note || 'Here is what I picked.') + ' This was picked by AI. Please check it and change anything that is wrong.' : (d.note || 'We could not tell what you need. Pick below, or call us.');
+      const n0 = (d.note || 'Here is what I picked.').trim(), n1 = /[.!?]$/.test(n0) ? n0 : n0 + '.';
+      stat.textContent = Object.keys(picks).length ? n1 + ' This was picked by AI. Please check it and change anything that is wrong.' : (d.note || 'We could not tell what you need. Pick below, or call us.');
     } catch (e) { stat.textContent = (e && e.message && !/abort|fetch|network/i.test(e.message)) ? e.message : 'The helper is busy. Please pick your options below.'; }
     abtn.disabled = false;
   };
