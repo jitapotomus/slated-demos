@@ -1,1 +1,1 @@
-QuoteWidget.mount(document.getElementById('qw'),'clean',{heading:false,form:'#estimate form'});
+QuoteWidget.mount(document.getElementById('qw'),'clean',{heading:false,form:'#estimate form',assist:{url:'https://slated-booking.shocktron7.workers.dev/v1/quote-assist?site=fe871d93-aeac-4149-954c-c4e673fd5a88',example:'For example: 3 bed 2 bath, deep clean before we move out'}});

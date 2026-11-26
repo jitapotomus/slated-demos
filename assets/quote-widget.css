@@ -52,3 +52,11 @@
 .qw .sent{margin:12px 0 0;padding:12px 14px;background:var(--w-soft);border-radius:calc(var(--w-r) * .75);color:var(--w-ink);font-size:14px}
 .qw .sent[hidden]{display:none}
 @media (max-width:860px){.qw .qgrid{grid-template-columns:1fr}.qw .est{position:static}.qw .ops{grid-template-columns:1fr}}
+
+.qw .assist{margin:0 0 22px;padding:16px;background:var(--w-soft);border-radius:calc(var(--w-r) * .75)}
+.qw .assist label{display:block;margin:0 0 8px;font-size:15px;color:var(--w-ink)}
+.qw .atext{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--w-ln);border-radius:calc(var(--w-r) * .6);background:#fff;color:#17152b;resize:vertical;min-height:64px}
+.qw .arow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px}
+.qw .abtn{font:700 15px var(--w-head);padding:11px 18px;border:0;border-radius:var(--w-br);background:var(--w-a);color:var(--w-bi);cursor:pointer;text-transform:var(--w-ht)}
+.qw .abtn:hover{background:var(--w-ad)}.qw .abtn:disabled{opacity:.6;cursor:wait}
+.qw .astat{font-size:14px;color:var(--w-mut);flex:1 1 220px}

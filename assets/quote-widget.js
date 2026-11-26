@@ -160,7 +160,8 @@ function mount(el, id, opts = {}) {
   const owner = opts.owner ? `<details class="owner"><summary>Owner view: set your own prices</summary><p class="hint">The owner changes these numbers once. Every customer sees the new price.</p><div class="ops">${Object.keys(sys.prices).map(k => `<label class="op"><span>${sys.prices[k][0]}</span><input type="number" step="any" data-k="${k}" value="${P(sys)(k)}"></label>`).join('')}</div></details>` : '';
   const head = opts.heading === false ? '' : `<h2>${sys.title}</h2><p class="blurb">${sys.blurb}</p>`;
   el.classList.add('qw');
-  el.innerHTML = `<div class="qgrid"><div class="qleft">${head}<form class="qf" onsubmit="return false">${fields}</form>${owner}</div>
+  const assistBlock = opts.assist ? `<div class="assist"><label for="${uid}t"><b>Not sure what you need?</b> Tell us in your own words.</label><textarea id="${uid}t" class="atext" rows="2" maxlength="500" placeholder="${opts.assist.example || 'For example: my kitchen sink is clogged and the faucet drips'}"></textarea><div class="arow"><button type="button" class="abtn">Fill it in for me</button><span class="astat" role="status"></span></div></div>` : '';
+  el.innerHTML = `<div class="qgrid"><div class="qleft">${head}${assistBlock}<form class="qf" onsubmit="return false">${fields}</form>${owner}</div>
     <aside class="est" aria-live="polite"><h3>Your estimate</h3><div class="lines"></div><div class="tot"><span>Total</span><b class="totv"></b></div><p class="note"></p><button class="go req" type="button">${opts.cta || 'Request this quote'}</button><p class="sent" hidden></p></aside></div>`;
   const L = labels(sys), form = $('.qf', el); let last = null;
   const run = () => {
@@ -180,6 +181,28 @@ function mount(el, id, opts = {}) {
       target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       sent.textContent = 'Your estimate is filled in below. Add your name and phone and send it.'; sent.hidden = false;
     } else { sent.textContent = 'In a real site this sends the request and the estimate to the owner. This is a demo, so nothing was sent.'; sent.hidden = false; }
+  };
+  const abtn = $('.abtn', el);
+  if (abtn) abtn.onclick = async () => {
+    const txt = $('.atext', el).value.trim(), stat = $('.astat', el);
+    if (txt.length < 3) { stat.textContent = 'Tell us a little about the problem first.'; return; }
+    abtn.disabled = true; stat.textContent = 'Reading your message...';
+    try {
+      const r = await fetch(opts.assist.url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ system: id, text: txt }), signal: AbortSignal.timeout(15000) });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(d.error || 'The helper is busy.');
+      const picks = d.picks || {};
+      for (const f of sys.fields) {
+        if (!(f.k in picks)) continue; const v = picks[f.k];
+        if (f.t === 'multi') form.querySelectorAll('[name=' + f.k + ']').forEach(i => { i.checked = v.includes(i.value); });
+        else if (f.t === 'check') $('[name=' + f.k + ']', form).checked = !!v;
+        else if (f.t === 'select' || f.t === 'radio') { const t = form.querySelector('[name=' + f.k + '][value="' + v + '"]') || $('[name=' + f.k + ']', form); if (t.type === 'radio') t.checked = true; else t.value = v; }
+        else { const i = $('[name=' + f.k + ']', form); i.value = v; const rv = $('[data-r=' + f.k + ']', el); if (rv) rv.textContent = v + (f.unit || ''); }
+      }
+      run();
+      stat.textContent = Object.keys(picks).length ? (d.note || 'Here is what I picked.') + ' This was picked by AI. Please check it and change anything that is wrong.' : (d.note || 'We could not tell what you need. Pick below, or call us.');
+    } catch (e) { stat.textContent = (e && e.message && !/abort|fetch|network/i.test(e.message)) ? e.message : 'The helper is busy. Please pick your options below.'; }
+    abtn.disabled = false;
   };
   run();
 }
