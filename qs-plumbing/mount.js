@@ -1,1 +1,1 @@
-QuoteWidget.mount(document.getElementById('qw'),'plumb',{heading:false,form:'#estimate form',assist:{url:'https://slated-booking.shocktron7.workers.dev/v1/quote-assist?site=fe871d93-aeac-4149-954c-c4e673fd5a88',example:'For example: my kitchen sink is clogged and the faucet drips'}});
+QuoteChat.mount(document.getElementById('qw'),{api:'https://slated-booking.shocktron7.workers.dev',site:'fe871d93-aeac-4149-954c-c4e673fd5a88',system:'plumb',form:'#estimate form',example:'For example: my shower will not shut off and the toilet runs all night'});

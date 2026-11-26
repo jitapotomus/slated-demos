@@ -60,3 +60,23 @@
 .qw .abtn{font:700 15px var(--w-head);padding:11px 18px;border:0;border-radius:var(--w-br);background:var(--w-a);color:var(--w-bi);cursor:pointer;text-transform:var(--w-ht)}
 .qw .abtn:hover{background:var(--w-ad)}.qw .abtn:disabled{opacity:.6;cursor:wait}
 .qw .astat{font-size:14px;color:var(--w-mut);flex:1 1 220px}
+/* Quote chat */
+.qc .sr{position:absolute;left:-9999px}
+.qc .chat{display:flex;flex-direction:column;gap:10px;max-height:340px;min-height:160px;overflow-y:auto;padding:4px 2px 12px}
+.qc .msg{max-width:88%;padding:11px 15px;border-radius:calc(var(--w-r) * 1.1);font-size:15.5px;line-height:1.45;white-space:pre-wrap;word-wrap:break-word}
+.qc .msg.assistant{background:var(--w-soft);color:var(--w-ink);align-self:flex-start;border-bottom-left-radius:4px}
+.qc .msg.user{background:var(--w-a);color:var(--w-bi);align-self:flex-end;border-bottom-right-radius:4px}
+.qc .cform{margin-top:6px}
+.qc .cform textarea{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--w-ln);border-radius:calc(var(--w-r) * .75);background:#fff;color:#17152b;resize:vertical;min-height:60px}
+.qc .crow{display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+.qc .abtn{font:700 15px var(--w-head);padding:11px 18px;border:0;border-radius:var(--w-br);background:var(--w-a);color:var(--w-bi);cursor:pointer;text-transform:var(--w-ht)}
+.qc .abtn:hover{background:var(--w-ad)}.qc .abtn:disabled{opacity:.6;cursor:wait}
+.qc .cstat{font-size:14px;color:var(--w-mut);flex:1 1 200px}
+.qc .browse{margin-top:20px;border-top:1px solid var(--w-ln);padding-top:14px}
+.qc .browse summary{cursor:pointer;font-weight:700;color:var(--w-ad)}
+.qc .bbody{margin-top:12px;display:grid;gap:4px}
+.qc .item .ctl{display:inline-flex;gap:4px;white-space:nowrap}
+.qc .item .ctl button{width:28px;height:28px;border:1.5px solid var(--w-ln);background:#fff;border-radius:8px;color:var(--w-a);font:700 15px sans-serif;cursor:pointer;padding:0;line-height:1}
+.qc .item .ctl button:hover{background:var(--w-soft)}
+.qc .ln small{color:var(--w-mut);font-size:13px}
+.qc .when{margin:14px 0 0}
