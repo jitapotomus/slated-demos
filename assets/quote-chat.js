@@ -44,7 +44,7 @@
       S.busy = true; $('.send', el).disabled = true; stat.textContent = 'Thinking...'; input.value = '';
       S.messages.push({ role: 'user', content: t }); say('user', t);
       try {
-        const d = await api('/v1/quote-chat', { messages: S.messages, cart: S.cart });
+        let d; try { d = await api('/v1/quote-chat', { messages: S.messages, cart: S.cart }); } catch (e1) { if (/busy/i.test(e1.message || '')) { stat.textContent = 'Still thinking...'; d = await api('/v1/quote-chat', { messages: S.messages, cart: S.cart }); } else throw e1; }
         S.messages.push({ role: 'assistant', content: d.reply }); say('assistant', d.reply); apply(d); stat.textContent = d.ready ? 'Review your estimate, then tap Request this quote.' : '';
       } catch (e) { S.messages.pop(); stat.textContent = ''; say('assistant', (e && e.message && !/abort|fetch|network|load/i.test(e.message)) ? e.message : 'Sorry, I am busy right now. You can pick jobs from the list below.'); }
       S.busy = false; $('.send', el).disabled = false;
