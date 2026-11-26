@@ -191,7 +191,7 @@ function mount(el, id, opts = {}) {
       const r = await fetch(opts.assist.url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ system: id, text: txt }), signal: AbortSignal.timeout(15000) });
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'The helper is busy.');
-      const picks = d.picks || {};
+      const picks = d.needs_visit ? {} : (d.picks || {});
       for (const f of sys.fields) {
         if (!(f.k in picks)) continue; const v = picks[f.k];
         if (f.t === 'multi') form.querySelectorAll('[name=' + f.k + ']').forEach(i => { i.checked = v.includes(i.value); });
@@ -201,7 +201,7 @@ function mount(el, id, opts = {}) {
       }
       run();
       const n0 = (d.note || 'Here is what I picked.').trim(), n1 = /[.!?]$/.test(n0) ? n0 : n0 + '.';
-      stat.textContent = Object.keys(picks).length ? n1 + ' This was picked by AI. Please check it and change anything that is wrong.' : (d.note || 'We could not tell what you need. Pick below, or call us.');
+      stat.textContent = Object.keys(picks).length ? n1 + ' This was picked by AI. Please check it and change anything that is wrong.' : (d.needs_visit ? 'This sounds like a bigger project, so we need to talk first. Tap Request this quote below or call us, and we will plan it with you.' : 'We could not tell what you need. Pick below, or call us.');
     } catch (e) { stat.textContent = (e && e.message && !/abort|fetch|network/i.test(e.message)) ? e.message : 'The helper is busy. Please pick your options below.'; }
     abtn.disabled = false;
   };
