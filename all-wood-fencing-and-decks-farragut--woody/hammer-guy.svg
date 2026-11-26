@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 500 510" role="img" aria-label="A friendly cartoon carpenter in a cap and overalls raising a hammer">
+  <ellipse cx="205" cy="470" rx="105" ry="13" fill="#000" opacity=".22"/>
+  <!-- boots -->
+  <rect x="136" y="430" width="62" height="34" rx="13" fill="#2d1b0e"/>
+  <rect x="212" y="430" width="62" height="34" rx="13" fill="#2d1b0e"/>
+  <!-- legs -->
+  <rect x="142" y="338" width="52" height="100" rx="12" fill="#2f5f94"/>
+  <rect x="216" y="338" width="52" height="100" rx="12" fill="#2f5f94"/>
+  <!-- shirt / torso -->
+  <rect x="118" y="178" width="174" height="170" rx="44" fill="#b33a2b"/>
+  <rect x="140" y="196" width="12" height="140" fill="#8f2b20" opacity=".55"/>
+  <rect x="172" y="196" width="10" height="140" fill="#8f2b20" opacity=".4"/>
+  <rect x="238" y="196" width="12" height="140" fill="#8f2b20" opacity=".55"/>
+  <rect x="124" y="236" width="162" height="10" fill="#8f2b20" opacity=".4"/>
+  <rect x="124" y="290" width="162" height="10" fill="#8f2b20" opacity=".4"/>
+  <!-- overalls bib + straps -->
+  <rect x="150" y="232" width="110" height="122" rx="20" fill="#2f5f94"/>
+  <rect x="150" y="192" width="15" height="58" fill="#2f5f94"/>
+  <rect x="245" y="192" width="15" height="58" fill="#2f5f94"/>
+  <rect x="176" y="270" width="58" height="38" rx="7" fill="#274f7d"/>
+  <circle cx="158" cy="246" r="6" fill="#f2c14e"/>
+  <circle cx="252" cy="246" r="6" fill="#f2c14e"/>
+  <!-- tape measure on belt -->
+  <rect x="236" y="322" width="22" height="18" rx="4" fill="#f2c14e"/>
+  <!-- left arm (down) -->
+  <rect x="84" y="196" width="40" height="104" rx="20" fill="#b33a2b" transform="rotate(10 104 210)"/>
+  <circle cx="96" cy="306" r="19" fill="#f2c29b"/>
+  <!-- right arm raised with hammer -->
+  <line x1="276" y1="214" x2="338" y2="142" stroke="#b33a2b" stroke-width="40" stroke-linecap="round"/>
+  <g transform="translate(344 132) rotate(28)">
+    <rect x="-9" y="-112" width="18" height="128" rx="7" fill="#b9783b"/>
+    <rect x="-9" y="-112" width="6" height="128" rx="3" fill="#d49a58" opacity=".7"/>
+    <rect x="-44" y="-138" width="88" height="38" rx="9" fill="#868b94"/>
+    <rect x="-44" y="-138" width="88" height="12" rx="6" fill="#b4b9c1"/>
+    <path d="M44 -134 L74 -144 L72 -108 L44 -104 Z" fill="#6f747c"/>
+  </g>
+  <circle cx="344" cy="132" r="21" fill="#f2c29b"/>
+  <path d="M332 128 q12 -8 24 0" stroke="#d9a07a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- head -->
+  <circle cx="132" cy="128" r="12" fill="#f2c29b"/>
+  <circle cx="278" cy="128" r="12" fill="#f2c29b"/>
+  <circle cx="205" cy="124" r="68" fill="#f2c29b"/>
+  <!-- cap -->
+  <path d="M135 112 Q205 24 275 112 Z" fill="#7a4a24"/>
+  <rect x="128" y="106" width="154" height="16" rx="8" fill="#4e3018"/>
+  <path d="M135 112 Q205 30 275 112" fill="none" stroke="#5b3a1e" stroke-width="3" opacity=".5"/>
+  <!-- face -->
+  <path d="M170 124 q10 -9 22 -3" stroke="#4e3018" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M218 121 q12 -6 22 3" stroke="#4e3018" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="181" cy="138" r="7" fill="#2d1b0e"/>
+  <circle cx="229" cy="138" r="7" fill="#2d1b0e"/>
+  <circle cx="183" cy="135" r="2.4" fill="#fff"/>
+  <circle cx="231" cy="135" r="2.4" fill="#fff"/>
+  <circle cx="157" cy="158" r="9" fill="#e8907a" opacity=".55"/>
+  <circle cx="253" cy="158" r="9" fill="#e8907a" opacity=".55"/>
+  <circle cx="205" cy="154" r="10" fill="#e9a97c"/>
+  <path d="M168 168 Q186 154 205 164 Q224 154 242 168 Q224 184 205 174 Q186 184 168 168 Z" fill="#4e3018"/>
+  <path d="M184 186 Q205 204 226 186" stroke="#4e3018" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
