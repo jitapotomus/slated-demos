@@ -33,7 +33,7 @@
       $('.wsel', el).value = S.cart.when;
     }
     async function api(path, body, method) {
-      const r = await fetch(o.api + path + q, { method: method || 'POST', headers: { 'Content-Type': 'application/json' }, body: method === 'GET' ? undefined : JSON.stringify(body), signal: AbortSignal.timeout(20000) });
+      const r = await fetch(o.api + path + q, { method: method || 'POST', headers: { 'Content-Type': 'application/json' }, body: method === 'GET' ? undefined : JSON.stringify(body), signal: AbortSignal.timeout(28000) });
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'The assistant is busy.');
       return d;
