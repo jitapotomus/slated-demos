@@ -33,8 +33,7 @@ h1{font:600 clamp(42px,6vw,78px)/1.02 var(--serif);letter-spacing:-.02em;margin:
 .pill svg{width:17px;height:17px;fill:currentColor}
 .guy{position:relative;justify-self:center;width:min(100%,430px)}
 .disc{position:relative;aspect-ratio:1;display:grid;place-items:center}
-.disc::before{content:"";position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(233,161,59,.38),rgba(233,161,59,0) 68%)}
-.disc img{position:relative;width:92%;height:auto;filter:drop-shadow(0 22px 28px rgba(0,0,0,.45))}
+.disc img{position:relative;width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.5))}
 .services{padding:96px 24px 100px;text-align:center}
 .head{max-width:680px;margin:0 auto 52px}
 .eyebrow{display:block;font:600 12px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--oak);margin-bottom:12px}
@@ -72,6 +71,7 @@ details p{margin:0;padding:0 4px 24px;color:var(--muted)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 input,select,textarea{width:100%;font:inherit;color:var(--ink);padding:13px 15px;border:1px solid #d8c9b0;border-radius:10px;background:#fff;transition:border-color .15s,box-shadow .15s}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 4px rgba(233,161,59,.25)}
+.thumb{width:min(240px,62%);height:auto;margin-top:30px;filter:drop-shadow(0 16px 22px rgba(42,28,18,.25))}
 .fine{font-size:13px;color:var(--muted)}
 .booking-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .form-result{margin:0;padding:12px 14px;border-radius:10px;background:var(--sand)}
