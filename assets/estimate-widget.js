@@ -37,7 +37,7 @@ if (panel) {
       const input=el('input','',{type:'number',name:f.key,min:f.min,max:f.max,step:1,inputmode:'numeric','aria-label':f.label});
       input.value=answers[f.key];
       input.addEventListener('input',()=>{answers[f.key]=input.value==='' ? null : Number(input.value);});
-      if(f.presets){const presets=el('div','',{class:'estimate-choices'});f.presets.forEach(p=>{const b=el('button',p.label,{type:'button'});b.addEventListener('click',()=>{input.value=p.value;answers[f.key]=p.value;});presets.append(b);});wrap.append(presets,el('p','Or enter the exact square feet below.'));}
+      if(f.presets){const presets=el('div','',{class:'estimate-choices'});f.presets.forEach(p=>{const b=el('button',p.label,{type:'button'});b.addEventListener('click',()=>{input.value=p.value;answers[f.key]=p.value;});presets.append(b);});wrap.append(presets,el('p',/sq ft/.test(f.unit||'') ? 'Or enter the exact square feet below.' : 'Or type the exact number below.'));}
       wrap.append(input);
     } else {
       const options=el('div','',{class:'estimate-choices'});
