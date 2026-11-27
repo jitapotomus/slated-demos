@@ -1,0 +1,129 @@
+/* Robinson Concrete: trade theme from the Brand Card (no logo). Colors are OURS: concrete gray, charcoal, safety yellow
+   (his Facebook driveway photo has yellow caution tape). Motifs: control-joint grid, square contractor stamp. */
+:root{--char:#2b2d2f;--char2:#3a3d40;--gray:#8a8d8f;--light:#e4e3df;--off:#f2f1ed;--yellow:#f2c230;--yellow-d:#d9a90f;--ink:#1e2022;--muted:#5c6064;
+  --head:'Barlow Condensed',Impact,sans-serif;--font:'Barlow',system-ui,sans-serif;--wrap:1120px;--gut:20px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.55 var(--font);color:var(--ink);background:var(--off);padding-bottom:64px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--head);font-weight:700;text-transform:uppercase;line-height:.98;letter-spacing:.005em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sample{background:#16181a;color:#cfcfca;font-size:13px;text-align:center;padding:7px var(--gut)}
+
+/* The square contractor stamp (like a mark pressed into a finished slab) */
+.stamp{display:inline-flex;flex-direction:column;align-items:center;border:3px solid currentColor;padding:6px 12px 5px;line-height:.95;text-transform:uppercase;font-family:var(--head)}
+.stamp b{font-weight:700;letter-spacing:.06em}
+.stamp i{font-style:normal;font-weight:600;letter-spacing:.32em;font-size:.62em;margin-top:3px}
+.stamp small{font:600 .42em/1 var(--font);letter-spacing:.2em;margin-top:6px;opacity:.8}
+.stamp.sm{color:var(--char);font-size:20px}
+.stamp.sm.light{color:var(--off);justify-self:start}
+.stamp.big{color:var(--yellow);font-size:clamp(34px,6vw,52px);padding:10px 18px 8px;border-width:4px;margin-bottom:28px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:background .2s,border-color .2s}
+.btn.small{min-height:42px;padding:0 16px;font-size:15px}
+.btn.yellow{background:var(--yellow);color:var(--char)}
+.btn.yellow:hover{background:var(--yellow-d)}
+.btn.ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn.ghost:hover{border-color:#fff}
+
+header{background:var(--off);border-bottom:1px solid #cfcdc6;position:sticky;top:0;z-index:5}
+.hrow{display:flex;align-items:center;gap:22px;min-height:70px}
+.brand{text-decoration:none;margin-right:auto}
+nav{display:flex;gap:22px}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--char)}
+
+/* Split hero: solid charcoal panel + photo, square edges */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--char);color:#fff;min-height:min(80vh,640px)}
+.hero-copy{display:flex;align-items:center;justify-content:flex-end;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:120px 120px}
+.hero-inner{max-width:calc(var(--wrap)/2);width:100%;padding:64px var(--gut) 64px var(--gut)}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem)}
+.lede{font-size:1.12rem;color:#d8d8d3;max-width:40ch;margin:18px 0 12px}
+.fb{margin:0 0 26px;font-weight:600;color:var(--yellow);font-size:15px}
+.fb::before{content:'';display:inline-block;width:18px;height:2px;background:var(--yellow);vertical-align:middle;margin-right:10px}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+
+/* Section titles sit on a yellow joint line */
+section h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:32px;display:flex;align-items:center;gap:16px}
+section h2::after{content:'';flex:1;height:3px;background:var(--yellow)}
+
+/* Control-joint grid behind the light sections */
+.services,.faq{padding:80px 0;background-color:var(--off);
+  background-image:linear-gradient(rgba(43,45,47,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(43,45,47,.07) 1px,transparent 1px);background-size:120px 120px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.svc{text-decoration:none;background:#fff;border:1px solid #d3d1ca;display:flex;flex-direction:column;transition:border-color .2s}
+.svc:hover{border-color:var(--char)}
+.svc img{aspect-ratio:4/3;object-fit:cover}
+.svc div{padding:16px 18px 20px;border-top:4px solid var(--yellow)}
+.svc h3{font-size:1.6rem;margin-bottom:6px;color:var(--char)}
+.svc p{margin:0;color:var(--muted);font-size:15.5px}
+
+.how{background:var(--char2);color:#fff;padding:80px 0}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:s;border:1px solid rgba(255,255,255,.18)}
+.steps li{counter-increment:s;padding:24px 20px;border-right:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:6px}
+.steps li:last-child{border-right:0}
+.steps li::before{content:counter(s);font:700 2.6rem/1 var(--head);color:var(--yellow)}
+.steps b{font-size:1.08rem}
+.steps span{color:#c9c9c4}
+
+.faq-list{max-width:760px;background:#fff;border:1px solid #d3d1ca;padding:4px 24px}
+details{border-bottom:1px solid #dddbd4;padding:16px 0}
+details:last-child{border-bottom:0}
+summary{font-weight:700;color:var(--char);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:1.4rem;line-height:1;color:var(--gray)}
+details[open] summary::after{content:'\2212'}
+details p{margin:10px 0 0;color:var(--muted)}
+
+.book{background:var(--yellow);padding:80px 0}
+.book h2::after{background:var(--char)}
+.book-in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.book-copy p{max-width:34ch;color:#3b3519}
+.big-phone{display:block;margin-top:12px;font:700 clamp(2.2rem,5vw,3rem) var(--head);color:var(--char);text-decoration:none}
+.mail{display:inline-block;margin-top:8px;font-weight:600;color:var(--char)}
+.f{background:#fff;color:var(--ink);padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid var(--char)}
+.f .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f input,.f select,.f textarea{font:inherit;font-size:16px;padding:12px;border:1px solid #bdbbb4;background:#fff;color:var(--ink);width:100%}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--char);outline-offset:1px}
+.f button{font:inherit;font-weight:700;min-height:52px;border:0;background:var(--char);color:#fff;cursor:pointer}
+.f button:hover{background:#000}
+.fine{font-size:13px;color:var(--muted)}
+.booking-hp{position:absolute;left:-9999px}
+
+footer{background:var(--char);color:#c9c9c4;padding:48px 0 20px;font-size:15px}
+.frow{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px;align-items:start}
+footer p{margin:4px 0 0}
+footer a{color:#fff}
+.credit{max-width:var(--wrap);margin:32px auto 0;padding:16px var(--gut) 0;border-top:1px solid rgba(255,255,255,.15);font-size:13px;color:#9a9b97}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;z-index:6}
+.mbar a{display:flex;align-items:center;justify-content:center;min-height:56px;font-weight:700;text-decoration:none}
+.mbar a:first-child{background:var(--char);color:#fff}
+.mbar a:last-child{background:var(--yellow);color:var(--char)}
+
+@media (min-width:901px){body{padding-bottom:0}.mbar{display:none}}
+@media (max-width:900px){
+  nav{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .hero-copy{justify-content:flex-start}
+  .hero-inner{max-width:none;padding:40px var(--gut)}
+  .hero-photo img{height:240px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps li:nth-child(2){border-right:0}
+  .steps li:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}
+  .book-in,.frow{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .btn.small{display:none}
+  .grid,.steps{grid-template-columns:minmax(0,1fr)}
+  .steps li{border-right:0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .steps li:last-child{border-bottom:0}
+  .f .two{grid-template-columns:minmax(0,1fr)}
+  .services,.how,.faq,.book{padding:56px 0}
+  .acts .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}

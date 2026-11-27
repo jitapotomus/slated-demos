@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="R stamp">
+  <!-- Placeholder mark (Brand Card: concrete theme): a square contractor stamp with R. -->
+  <rect x="1" y="1" width="46" height="46" fill="#2b2d2f"/>
+  <rect x="5" y="5" width="38" height="38" fill="none" stroke="#f2c230" stroke-width="2"/>
+  <path d="M16 13h10.5c5 0 8 2.6 8 6.8 0 3.1-1.7 5.2-4.5 6.1L36 35h-6.2l-5.3-8.4H22V35h-6zm6 4.8v4.4h4.2c1.6 0 2.5-.8 2.5-2.2s-.9-2.2-2.5-2.2z" fill="#f2f1ed"/>
+</svg>
