@@ -48,7 +48,8 @@ header{background:var(--hot);color:#fff}
   .hero>img{aspect-ratio:4/3}
 
   .svc-list .svc{grid-template-columns:minmax(0,1fr) 90px}
-  .svc-list .svc img{width:90px;height:70px;grid-row:span 2}
+  .svc-list .svc h3,.svc-list .svc p{grid-column:1}
+  .svc-list .svc img{width:90px;height:70px;grid-column:2;grid-row:1/span 2}
   .band,.book{grid-template-columns:minmax(0,1fr)}
   .how .steps{grid-template-columns:minmax(0,1fr)}
   .faq-list{columns:1}
