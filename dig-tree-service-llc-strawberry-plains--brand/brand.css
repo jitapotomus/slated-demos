@@ -1,0 +1,3 @@
+/* From the Brand Card (BRAND_CARDS.md). */
+:root{--brand:#005020;--accent:#005020;--on-accent:#ffffff;--dark:#001c0b;--light:#eaf1ed}
+.hero .btn.main{background:#fff;color:var(--brand)}.hero .btn.main:hover{filter:none;background:#f1f1f1}

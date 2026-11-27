@@ -1,0 +1,4 @@
+/* From the Brand Card (BRAND_CARDS.md). */
+:root{--brand:#956331;--accent:#956331;--on-accent:#ffffff;--dark:#342211;--light:#f6f2ee}
+.chip{border-radius:0;background:#abc996;box-shadow:none}.chip img{width:100%}.fbrand img{background:#abc996}
+.hero .btn.main{background:#fff;color:var(--brand)}.hero .btn.main:hover{filter:none;background:#f1f1f1}
