@@ -137,6 +137,8 @@ document.querySelectorAll('form.demo-form').forEach(form => {
       values.site = form.dataset.site;
       values.t = loaded;
       values.page = window.location.pathname;
+      const campaign = /[?&]c=([a-f0-9-]{36})(?:&|$)/.exec(window.location.search || '')?.[1];  // came from a past-customer email
+      if (campaign) values.campaign = campaign;
       if (form.dataset.demo === 'true') values.demo_business = form.dataset.demoBusiness || form.dataset.business;
       const endpoint = new URL(form.dataset.endpoint);
       endpoint.searchParams.set('site', values.site);

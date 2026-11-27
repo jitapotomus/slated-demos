@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reactivation sandbox | Slated Studio</title>
+<meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/brand-base.css">
+<link rel="stylesheet" href="sandbox.css">
+<script src="../assets/site.js" defer></script>
+<script src="sandbox.js" defer></script>
+</head>
+<body>
+<div class="sample">Sandbox for testing past-customer emails. Nothing here goes to real customers.</div>
+<main class="wrap sb">
+  <h1>Reactivation sandbox</h1>
+  <p class="lede-dark">This is the "Book a time" page the campaign emails link to. Use it to test the whole loop.</p>
+  <p id="came" class="came" hidden>You came here from a campaign email. Send the form below and the campaign's "Booked" count goes up.</p>
+  <ol class="steps-list">
+    <li>Open the <b>Past customers</b> tab on the demo owner page (Desktop shortcut "Reactivation sandbox").</li>
+    <li>Press <b>Load sample customers</b>, then pick a campaign and press <b>Send campaign</b>.</li>
+    <li>Check your inbox: emails arrive marked <b>[DEMO]</b> (they would go to the customers on a real site).</li>
+    <li>In an email, tap the <b>Book a time</b> link. It opens this page. Send the form.</li>
+    <li>Back on the Past customers tab, the campaign shows <b>Booked: 1</b>. Try the call list buttons and the unsubscribe link too.</li>
+  </ol>
+  <form data-v2="true" data-phone="(865) 345-3670" data-business="Sample Business" data-endpoint="https://slated-booking.shocktron7.workers.dev/v1/request" data-site="fe871d93-aeac-4149-954c-c4e673fd5a88" data-demo="true" data-demo-business="Sample Business (reactivation test)" class="demo-form f">
+    <div class="two"><input name="name" maxlength="120" placeholder="Your name" required autocomplete="name" aria-label="Name"><input name="phone" maxlength="40" type="tel" placeholder="Phone (use a sample customer's number to match)" required autocomplete="tel" aria-label="Phone"></div>
+    <input type="email" name="email" maxlength="254" placeholder="Email (optional)" autocomplete="email" aria-label="Email">
+    <select name="service" required aria-label="Service"><option>Fall clean-up</option><option>Tune-up</option><option>Something else</option></select>
+    <textarea name="message" maxlength="2000" rows="2" placeholder="Anything else? (optional)" aria-label="Message"></textarea>
+    <button type="submit">Book a time</button>
+    <input type="text" name="hp" class="booking-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="t">
+    <p class="form-result" role="status" hidden></p>
+  </form>
+</main>
+</body>
+</html>
