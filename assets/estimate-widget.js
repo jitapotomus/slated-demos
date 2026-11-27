@@ -69,7 +69,7 @@ if (panel) {
         const response=await fetch(url.href,{method:'POST',credentials:'omit',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:'recipe:'+trade,text:text.value.trim()})});
         const data=await response.json();if(!response.ok)throw Error(data.error || 'The helper is busy. Pick your options below.');
         if(data.needs_visit || !Object.keys(data.picks || {}).length)throw Error(data.note || 'We could not tell what you need. Pick below, or call us.');
-        for(const f of fields())if(f.type==='number')answers[f.key]=Object.hasOwn(data.picks,f.key) ? data.picks[f.key] : 0;  // sizes not mentioned = none
+        for(const f of fields())if(f.type==='number')answers[f.key]=Object.hasOwn(data.picks,f.key) ? data.picks[f.key] : (f.min > 0 ? f.default : 0);  // not mentioned: none, or the default when 0 isn't allowed (bedrooms)
         for(const [k,v] of Object.entries(data.picks))if(fields().some(f=>f.key===k && f.type!=='number'))answers[k]=v;
         assistNote=(data.note || '').replace(/([^.!?])$/,'$1.')+' Check it below, or go Back to change anything.';
         price();step=priceStep();busy=false;render();

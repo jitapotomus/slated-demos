@@ -4,6 +4,7 @@ export default {
   "trade": "plumbing",
   "label": "Plumbing",
   "kind": "A",
+  "assist": true,
   "serviceField": "service",
   "fields": [
     {

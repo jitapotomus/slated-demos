@@ -2,6 +2,7 @@ export default {
   "trade": "house_cleaning",
   "label": "House cleaning",
   "kind": "A",
+  "assist": true,
   "serviceField": "service",
   "fields": [
     {

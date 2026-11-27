@@ -2,6 +2,7 @@ export default {
   "trade": "pressure_washing",
   "label": "Pressure washing",
   "kind": "A",
+  "assist": true,
   "serviceField": "service",
   "fields": [
     {

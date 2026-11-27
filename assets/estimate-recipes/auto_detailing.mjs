@@ -2,6 +2,7 @@ export default {
   "trade": "auto_detailing",
   "label": "Auto detailing",
   "kind": "A",
+  "assist": true,
   "serviceField": "service",
   "fields": [
     {

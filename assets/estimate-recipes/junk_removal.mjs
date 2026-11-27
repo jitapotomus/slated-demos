@@ -2,6 +2,7 @@ export default {
   "trade": "junk_removal",
   "label": "Junk removal",
   "kind": "A",
+  "assist": true,
   "serviceField": "service",
   "fields": [
     {
