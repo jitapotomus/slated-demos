@@ -1,0 +1,114 @@
+/* R&J Tree: their black serif "R&J" logo (theirs: black + white). Pine green + cream are OURS (their posts = evergreens). */
+:root{--ink:#141414;--pine:#2f5a3a;--pine-d:#244a2e;--cream:#f6f1e6;--paper:#fffdf8;--muted:#5f5b52;--rule:#d9d0bd;
+  --serif:'Fraunces',Georgia,serif;--font:'DM Sans',system-ui,sans-serif;--wrap:1120px;--gut:20px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.6 var(--font);color:var(--ink);background:var(--cream);padding-bottom:64px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2{font-family:var(--serif);font-weight:600;margin:0;line-height:1.02;letter-spacing:-.015em}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:28px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sample{background:var(--ink);color:#d9d4c8;font-size:13px;text-align:center;padding:7px var(--gut)}
+
+/* Centered wordmark, sparse nav (their logo is just "R&J") */
+header{background:var(--paper);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:5}
+.hrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:72px;gap:20px}
+nav{display:flex;gap:24px;align-items:center}
+nav.right{justify-content:flex-end}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+nav .call{color:var(--pine);font-weight:700}
+.mark{font:600 38px/1 var(--serif);text-decoration:none;color:var(--ink);letter-spacing:-.02em}
+.mark.light{color:var(--paper);font-size:48px}
+
+.hero{padding:88px 0 64px;text-align:center}
+.over{margin:0 0 18px;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--pine)}
+.hero h1{font-size:clamp(3rem,8vw,6rem)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--pine)}
+.lede{max-width:44ch;margin:22px auto 30px;font-size:1.12rem;color:var(--muted)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+.btn.dark{background:var(--ink);color:var(--paper)}
+.btn.dark:hover{background:var(--pine);border-color:var(--pine)}
+.btn.line:hover{background:var(--ink);color:var(--paper)}
+
+/* Photo strip instead of icon cards */
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.strip img{width:100%;height:clamp(180px,26vw,360px);object-fit:cover}
+
+.years{background:var(--pine);color:var(--paper);padding:64px 0}
+.years-in{display:flex;align-items:center;gap:32px}
+.big{margin:0;font:600 clamp(5rem,14vw,9rem)/.85 var(--serif)}
+.say{margin:0;font:500 clamp(1.2rem,2.6vw,1.7rem)/1.35 var(--serif);max-width:30ch}
+
+.services{padding:80px 0;background:var(--paper)}
+.rows{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.rows a{display:grid;grid-template-columns:60px minmax(0,1fr) minmax(0,1.3fr);gap:20px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.rows .n{font:500 14px var(--font);color:var(--pine)}
+.rows b{font:600 clamp(1.4rem,2.6vw,1.9rem)/1.1 var(--serif)}
+.rows .d{color:var(--muted)}
+.rows a:hover b{color:var(--pine)}
+
+.how{padding:80px 0}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:6px;border-top:1.5px solid var(--ink);padding-top:14px}
+.steps li::before{content:counter(s);font:italic 500 2.2rem/1 var(--serif);color:var(--pine)}
+.steps span{color:var(--muted)}
+
+.faq{padding:80px 0;background:var(--paper)}
+.faq-list{max-width:760px}
+details{border-bottom:1px solid var(--rule);padding:16px 0}
+summary{font:600 1.15rem var(--serif);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--pine);font-family:var(--font)}
+details[open] summary::after{content:'\2212'}
+details p{margin:8px 0 0;color:var(--muted)}
+
+.book{background:var(--ink);color:var(--paper);padding:80px 0}
+.book-in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.book-copy p{color:#cfc9bc}
+.big-phone{display:inline-block;margin-top:10px;font:600 clamp(2rem,5vw,2.8rem) var(--serif);color:var(--paper);text-decoration:none;border-bottom:2px solid #7fa486}
+.f{background:var(--paper);color:var(--ink);padding:24px;display:flex;flex-direction:column;gap:12px}
+.f .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f input,.f select,.f textarea{font:inherit;font-size:16px;padding:12px;border:1px solid #c9bfa9;background:#fff;color:var(--ink);width:100%}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--pine);outline-offset:1px}
+.f button{font:inherit;font-weight:700;min-height:52px;border:0;background:var(--pine);color:#fff;cursor:pointer}
+.f button:hover{background:var(--pine-d)}
+.fine{font-size:13px;color:var(--muted)}
+.booking-hp{position:absolute;left:-9999px}
+
+footer{background:#0d0d0d;color:#bdb7aa;padding:48px 0 20px;font-size:15px}
+.frow{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:24px;align-items:center}
+footer b{color:var(--paper)}
+footer p{margin:4px 0 0}
+footer a{color:var(--paper)}
+.credit{max-width:var(--wrap);margin:32px auto 0;padding:16px var(--gut) 0;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:#8d877a}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;z-index:6}
+.mbar a{display:flex;align-items:center;justify-content:center;min-height:56px;font-weight:700;text-decoration:none}
+.mbar a:first-child{background:var(--ink);color:#fff}
+.mbar a:last-child{background:var(--pine);color:#fff}
+
+@media (min-width:901px){body{padding-bottom:0}.mbar{display:none}}
+@media (max-width:900px){
+  .hrow{grid-template-columns:auto 1fr}
+  nav.left{display:none}
+  nav.right a:not(.call){display:none}
+  .mark{order:-1}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rows a{grid-template-columns:40px minmax(0,1fr)}
+  .rows .d{grid-column:2}
+  .book-in,.frow{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .hero{padding:56px 0 44px}
+  .strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .strip img:last-child{display:none}
+  .years-in{flex-direction:column;align-items:flex-start;gap:12px}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .f .two{grid-template-columns:minmax(0,1fr)}
+  .services,.how,.faq,.book{padding:56px 0}
+  .acts .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
