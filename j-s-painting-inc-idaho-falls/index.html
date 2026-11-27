@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="J &amp; S Painting | Painting in Idaho Falls, ID"><meta property="og:description" content="Painting in Idaho Falls, ID. Book a free estimate with J &amp; S Painting online or call (208) 589-0668.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-split.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "J \u0026 S Painting", "address": {"@type": "PostalAddress", "addressLocality": "Idaho Falls", "addressRegion": "ID"}, "telephone": "(208) 589-0668"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -22,7 +22,7 @@
   <a class="hcall" href="tel:+12085890668"><svg><use href="#phone"/></svg>(208) 589-0668</a></div></header>
 <section class="hero">
   <div class="hero-text">
-    <h1>Painting in Idaho Falls.</h1>
+    <h1>Painting in Idaho Falls.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
     <p class="lead">Tell us what you need and ask about the next step.</p>
     <div class="acts"><a class="btn" href="#estimate">Book a free estimate</a><a class="tel" href="tel:+12085890668">or call (208) 589-0668</a></div>
     
@@ -34,7 +34,7 @@
   <div><b>Straight answers</b><span>If a touch-up will do, we&#x27;ll tell you. No repainting what doesn&#x27;t need it.</span></div>
   <div><b>Based in Idaho Falls</b><span>Your neighbors, not a call center.</span></div>
 </section>
-<section class="services" id="services"><h2>Painting, handled</h2><div class="zig"><a class="svc" href="#estimate"><img src="../assets/img/pt-roller.jpg" alt="Interior painting" loading="lazy"><div><h3>Interior painting</h3><p>Walls, ceilings and trim in any room.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-exterior.jpg" alt="Exterior painting" loading="lazy"><div><h3>Exterior painting</h3><p>Siding, trim and doors painted to last.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-cabinets.jpg" alt="Cabinets" loading="lazy"><div><h3>Cabinets</h3><p>Kitchen and bath cabinets refreshed without a remodel.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-trim.jpg" alt="Trim &amp; touch-ups" loading="lazy"><div><h3>Trim &amp; touch-ups</h3><p>Baseboards, doors and touch-ups before a sale or move.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="services" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>Painting, handled</h2><div class="zig"><a class="svc" href="#estimate"><img src="../assets/img/pt-roller.jpg" alt="Interior painting" loading="lazy"><div><h3>Interior painting</h3><p>Walls, ceilings and trim in any room.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-exterior.jpg" alt="Exterior painting" loading="lazy"><div><h3>Exterior painting</h3><p>Siding, trim and doors painted to last.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-cabinets.jpg" alt="Cabinets" loading="lazy"><div><h3>Cabinets</h3><p>Kitchen and bath cabinets refreshed without a remodel.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-trim.jpg" alt="Trim &amp; touch-ups" loading="lazy"><div><h3>Trim &amp; touch-ups</h3><p>Baseboards, doors and touch-ups before a sale or move.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="how" id="how"><div class="how-in"><h2>Four simple steps to fresh paint</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
       <li><b>We look at the surfaces</b><span>We check the walls or siding and talk through colors and prep.</span></li>
@@ -62,6 +62,6 @@
   <p class="credit">&copy; 2026 J &amp; S Painting &nbsp;|&nbsp; <a href="privacy.html">Privacy</a> &nbsp;|&nbsp; Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+12085890668">Call (208) 589-0668</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="painting" aria-label="Instant estimate"></dialog>
 </body>
 </html>

@@ -56,6 +56,28 @@ if (panel) {
     }
     return wrap;
   }
+  // "Just tell us": the AI only fills in this form's own answers; the price is still worked out from the owner's prices.
+  let assistNote='';
+  function assistBox() {
+    const wrap=el('div','',{class:'estimate-assist'}), text=el('textarea','',{maxlength:500,rows:3,'aria-label':'Describe the job',placeholder:'For example: inside of my house, about 2,000 sq ft, premium paint, ceilings too'});
+    const go=el('button','Price it for me',{type:'button'});
+    wrap.append(el('p','Or just tell us what you need:'),text,go);
+    go.addEventListener('click',async()=>{
+      if(busy || text.value.trim().length<3)return;busy=true;go.disabled=true;go.textContent='Working on it...';error.textContent='';
+      try {
+        const url=new URL('/v1/quote-assist',source.dataset.endpoint);url.searchParams.set('site',source.dataset.site);
+        const response=await fetch(url.href,{method:'POST',credentials:'omit',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:'recipe:'+trade,text:text.value.trim()})});
+        const data=await response.json();if(!response.ok)throw Error(data.error || 'The helper is busy. Pick your options below.');
+        if(data.needs_visit || !Object.keys(data.picks || {}).length)throw Error(data.note || 'We could not tell what you need. Pick below, or call us.');
+        for(const f of fields())if(f.type==='number')answers[f.key]=Object.hasOwn(data.picks,f.key) ? data.picks[f.key] : 0;  // sizes not mentioned = none
+        for(const [k,v] of Object.entries(data.picks))if(fields().some(f=>f.key===k && f.type!=='number'))answers[k]=v;
+        assistNote=(data.note || '')+' Check it below, or go Back to change anything.';
+        price();step=priceStep();busy=false;render();
+      } catch(err){error.textContent=/surface/.test(err.message) ? 'Tell us the size too (square feet).' : err.message;}
+      finally {busy=false;go.disabled=false;go.textContent='Price it for me';}
+    });
+    return wrap;
+  }
   function render() {
     error.textContent='';content.replaceChildren();back.hidden=step===0;next.hidden=false;nav.hidden=false;
     const total=contactStep()+1;
@@ -65,8 +87,9 @@ if (panel) {
       const page=pages()[step];
       content.append(el('h2',step===0 ? 'What can we help with?' : page.length===1 ? fields()[page[0]].label : 'A few quick details'));
       page.forEach(i=>content.append(field(fields()[i]))); next.textContent=step===priceStep()-1 ? 'See my estimate' : 'Next';
+      if(step===0 && config.recipe.assist && source.dataset.endpoint)content.append(assistBox());
     } else if(step===priceStep()) {
-      result=price();content.append(el('h2',`Your estimate: ${estimateText(result)}`));
+      result=price();if(assistNote)content.append(el('p',assistNote,{class:'estimate-assist-note'}));content.append(el('h2',`Your estimate: ${estimateText(result)}`));
       const list=el('ul');result.lines.forEach(l=>list.append(el('li',`${l.label}: $${(l.cents/100).toFixed(2)}`)));content.append(list);
       result.notes.forEach(note=>content.append(el('p',note)));
       next.textContent='Send my request';

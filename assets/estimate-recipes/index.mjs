@@ -3,6 +3,5 @@ import auto_detailing from './auto_detailing.mjs';
 import pressure_washing from './pressure_washing.mjs';
 import junk_removal from './junk_removal.mjs';
 import plumbing from './plumbing.mjs';
-import tree_service from './tree_service.mjs';
-import concrete from './concrete.mjs';
-export const recipes = {house_cleaning,auto_detailing,pressure_washing,junk_removal,plumbing,tree_service,concrete};
+import painting from './painting.mjs';
+export const recipes = {house_cleaning,auto_detailing,pressure_washing,junk_removal,plumbing,painting};

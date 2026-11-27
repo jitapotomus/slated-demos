@@ -16,3 +16,7 @@
 #instant-estimate .estimate-choices label:has(input:checked){border-color:var(--button,var(--brand,#2f5d4a));background:color-mix(in srgb,var(--button,var(--brand,#2f5d4a)) 8%,transparent)}
 #instant-estimate .estimate-content ul{padding-left:18px;color:var(--muted,#555)}
 @media (prefers-reduced-motion:reduce){#instant-estimate .estimate-progress::after{transition:none}}
+
+.estimate-assist{margin-top:18px;padding-top:14px;border-top:1px solid currentColor;border-color:color-mix(in srgb,currentColor 18%,transparent)}
+.estimate-assist textarea{width:100%;box-sizing:border-box;font:inherit;padding:10px;margin:6px 0 8px}
+.estimate-assist-note{font-size:.95em;opacity:.85}

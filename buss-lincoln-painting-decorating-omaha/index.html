@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Buss Lincoln Painting &amp; Decorating | Painting in Omaha, NE"><meta property="og:description" content="Painting in Omaha, NE. Book a free estimate with Buss Lincoln Painting &amp; Decorating online or call (402) 455-9731.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-poster.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Buss Lincoln Painting \u0026 Decorating", "address": {"@type": "PostalAddress", "addressLocality": "Omaha", "addressRegion": "NE"}, "telephone": "(402) 455-9731"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -19,12 +19,12 @@
 <div class="sample">Sample website made for Buss Lincoln Painting &amp; Decorating by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Buss Lincoln</b><small>Painting &amp; Decorating</small></a><a class="hcall" href="tel:+14024559731">(402) 455-9731</a></div></header>
 <section class="hero">
-  <h1>Painting in Omaha.</h1>
+  <h1>Painting in Omaha.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-row"><p class="lead">Tell us what you need and ask about the next step.</p><a class="btn" href="#estimate">Free estimate <svg><use href="#arrow"/></svg></a></div>
   <img src="../assets/img/pt-roller.jpg" alt="">
 </section>
 <div class="ticker" aria-hidden="true"><div>Omaha · Bellevue · Papillion · La Vista · Elkhorn · Gretna · Ralston · Bennington · Council Bluffs · Omaha · Bellevue · Papillion · La Vista · Elkhorn · Gretna · Ralston · Bennington · Council Bluffs · </div></div>
-<section class="list" id="services"><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/pt-roller.jpg" alt="Interior painting" loading="lazy"><div><h3>Interior painting</h3><p>Walls, ceilings and trim in any room.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-exterior.jpg" alt="Exterior painting" loading="lazy"><div><h3>Exterior painting</h3><p>Siding, trim and doors painted to last.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-cabinets.jpg" alt="Cabinets" loading="lazy"><div><h3>Cabinets</h3><p>Kitchen and bath cabinets refreshed without a remodel.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-trim.jpg" alt="Trim &amp; touch-ups" loading="lazy"><div><h3>Trim &amp; touch-ups</h3><p>Baseboards, doors and touch-ups before a sale or move.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="list" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/pt-roller.jpg" alt="Interior painting" loading="lazy"><div><h3>Interior painting</h3><p>Walls, ceilings and trim in any room.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-exterior.jpg" alt="Exterior painting" loading="lazy"><div><h3>Exterior painting</h3><p>Siding, trim and doors painted to last.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-cabinets.jpg" alt="Cabinets" loading="lazy"><div><h3>Cabinets</h3><p>Kitchen and bath cabinets refreshed without a remodel.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/pt-trim.jpg" alt="Trim &amp; touch-ups" loading="lazy"><div><h3>Trim &amp; touch-ups</h3><p>Baseboards, doors and touch-ups before a sale or move.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="band"><img src="../assets/img/pt-ladder.jpg" alt="" loading="lazy"><div><h2>If a touch-up will do, we&#x27;ll tell you. No repainting what doesn&#x27;t need it.</h2></div></section>
 <section class="how"><h2>Four simple steps to fresh paint</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -51,6 +51,6 @@
   <p class="credit">&copy; 2026 Buss Lincoln Painting &amp; Decorating &nbsp;|&nbsp; <a href="privacy.html">Privacy</a> &nbsp;|&nbsp; Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+14024559731">Call (402) 455-9731</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="painting" aria-label="Instant estimate"></dialog>
 </body>
 </html>

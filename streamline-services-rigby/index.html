@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Streamline Services | Painting in Rigby, ID"><meta property="og:description" content="Painting in Rigby, ID. Book a free estimate with Streamline Services online or call (208) 221-6059.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/edge.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Streamline Services", "address": {"@type": "PostalAddress", "addressLocality": "Rigby", "addressRegion": "ID"}, "telephone": "(208) 221-6059"}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -27,7 +27,7 @@
   </header>
   <div class="hero-foot">
     <div class="hero-copy">
-      <h1>Let&#x27;s talk painting.</h1>
+      <h1>Let&#x27;s talk painting.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
       <p>Share your plans in Rigby and ask for a quote.</p>
     </div>
     <div class="hero-act">
@@ -38,7 +38,7 @@
   </div>
 </section>
 
-<section class="intro" id="services">
+<section class="intro" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <h2>Painting, handled</h2>
   <p>If a touch-up will do, we&#x27;ll tell you. No repainting what doesn&#x27;t need it.</p>
 </section>
@@ -106,6 +106,6 @@
 </footer>
 
 <div class="mbar"><a href="tel:+12082216059">Call (208) 221-6059</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="painting" aria-label="Instant estimate"></dialog>
 </body>
 </html>
