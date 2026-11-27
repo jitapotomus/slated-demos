@@ -56,7 +56,8 @@ export function estimate(recipe, prices = {}, answers = {}) {
   add('Round to nearest $5',rounded-total,'rounding');
   const kind = recipe.kind;
   if (!['A','B','C','D'].includes(kind)) fail('Unknown estimate type.');
-  return {kind,low:kind==='B' ? Math.round(rounded*(10000-p.range_low)/10000/500)*500 : rounded,
+  const floor=Math.ceil(p.minimum/500)*500;  // a range never starts below the minimum charge
+  return {kind,low:kind==='B' ? Math.max(floor,Math.round(rounded*(10000-p.range_low)/10000/500)*500) : rounded,
     high:kind==='B' ? Math.round(rounded*(10000+p.range_high)/10000/500)*500 : rounded,
     lines,notes:[...(recipe.notes || []),'Estimate based on your answers. The final price is confirmed before any work starts.']};
 }

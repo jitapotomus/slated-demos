@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Heritage Foundation Solutions | Concrete in Collinsville, OK"><meta property="og:description" content="Concrete in Collinsville, OK. Book a free estimate with Heritage Foundation Solutions online or call (918) 927-9598.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-poster.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Heritage Foundation Solutions", "address": {"@type": "PostalAddress", "addressLocality": "Collinsville", "addressRegion": "OK"}, "telephone": "(918) 927-9598", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 5.0, "reviewCount": 26}}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -19,12 +19,12 @@
 <div class="sample">Sample website made for Heritage Foundation Solutions by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Heritage Foundation</b><small>Solutions</small></a><a class="hcall" href="tel:+19189279598">(918) 927-9598</a></div></header>
 <section class="hero">
-  <h1>Concrete work in Collinsville.</h1>
+  <h1>Concrete work in Collinsville.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-row"><p class="lead">Tell us what you need and ask about the next step.</p><a class="btn" href="#estimate">Free estimate <svg><use href="#arrow"/></svg></a></div>
   <img src="../assets/img/con-crew.jpg" alt="">
 </section>
 <div class="ticker" aria-hidden="true"><div>Collinsville · Tulsa · Broken Arrow · Owasso · Jenks · Bixby · Sand Springs · Sapulpa · Glenpool · Collinsville · Tulsa · Broken Arrow · Owasso · Jenks · Bixby · Sand Springs · Sapulpa · Glenpool · </div></div>
-<section class="list" id="services"><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/con-driveway.jpg" alt="Driveways" loading="lazy"><div><h3>Driveways</h3><p>New driveways and old, cracked ones torn out and replaced.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/con-patio.jpg" alt="Patios" loading="lazy"><div><h3>Patios</h3><p>Plain or stamped patios for your back yard.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/con-steps.jpg" alt="Sidewalks &amp; steps" loading="lazy"><div><h3>Sidewalks &amp; steps</h3><p>Walkways and front steps poured and finished.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/con-pour.jpg" alt="Slabs &amp; pads" loading="lazy"><div><h3>Slabs &amp; pads</h3><p>Slabs for sheds, garages, hot tubs and more.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="list" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>What we do</h2><div class="svc-list"><a class="svc" href="#estimate"><img src="../assets/img/con-driveway.jpg" alt="Driveways" loading="lazy"><div><h3>Driveways</h3><p>New driveways and old, cracked ones torn out and replaced.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/con-patio.jpg" alt="Patios" loading="lazy"><div><h3>Patios</h3><p>Plain or stamped patios for your back yard.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/con-steps.jpg" alt="Sidewalks &amp; steps" loading="lazy"><div><h3>Sidewalks &amp; steps</h3><p>Walkways and front steps poured and finished.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/con-pour.jpg" alt="Slabs &amp; pads" loading="lazy"><div><h3>Slabs &amp; pads</h3><p>Slabs for sheds, garages, hot tubs and more.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="band"><img src="../assets/img/con-screed.jpg" alt="" loading="lazy"><div><h2>If a repair will do, we&#x27;ll tell you. No pushing a full tear-out you don&#x27;t need.</h2><p class="rated">Rated 5.0 on Google from 26 reviews</p></div></section>
 <section class="how"><h2>Four simple steps to new concrete</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -51,6 +51,6 @@
   <p class="credit">&copy; 2026 Heritage Foundation Solutions &nbsp;|&nbsp; <a href="privacy.html">Privacy</a> &nbsp;|&nbsp; Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+19189279598">Call (918) 927-9598</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="concrete" aria-label="Instant estimate"></dialog>
 </body>
 </html>

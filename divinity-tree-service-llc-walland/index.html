@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://slated-booking.shocktron7.workers.dev; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta property="og:title" content="Divinity Tree Service | Tree service in Walland, TN"><meta property="og:description" content="Tree service in Walland, TN. Book a free estimate with Divinity Tree Service online or call (865) 313-0378.">
 <link rel="stylesheet" href="../assets/fonts.css"><link rel="stylesheet" href="../assets/n-base.css"><link rel="stylesheet" href="../assets/n-magazine.css"><script src="../assets/site.js" defer></script>
-
+<link rel="stylesheet" href="../assets/estimate.css"><script type="module" src="../assets/estimate-widget.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Divinity Tree Service", "address": {"@type": "PostalAddress", "addressLocality": "Walland", "addressRegion": "TN"}, "telephone": "(865) 313-0378", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 5.0, "reviewCount": 52}}</script>
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -18,9 +18,9 @@
 </svg>
 <div class="sample">Sample website made for Divinity Tree Service by Slated Studio. Photos are placeholders. Not live yet.</div>
 <header><div class="hwrap"><a class="logo" href="#"><b>Divinity</b><small>Tree Service</small></a><span class="issue">Tree service · Walland, TN</span><a class="hcall" href="tel:+18653130378">(865) 313-0378</a></div></header>
-<section class="hero"><h1>Let&#x27;s talk tree work.</h1>
+<section class="hero"><h1>Let&#x27;s talk tree work.</h1><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button>
   <div class="hero-grid"><div class="side"><p>Share your plans in Walland and ask for a quote.</p><a class="btn" href="#estimate">Book a free estimate</a><p class="rated">Rated 5.0 on Google from 52 reviews</p></div><img src="../assets/img/tree-house.jpg" alt=""></div></section>
-<section class="index" id="services"><h2>Services</h2><div class="entries"><a class="svc" href="#estimate"><img src="../assets/img/tree-cut.jpg" alt="Tree removal" loading="lazy"><div><h3>Tree removal</h3><p>Dead, leaning or unwanted trees taken down in sections.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/tree-rig.jpg" alt="Trimming &amp; pruning" loading="lazy"><div><h3>Trimming &amp; pruning</h3><p>Overgrown limbs cut back for light, roofs and power lines.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/tree-stump.jpg" alt="Stump grinding" loading="lazy"><div><h3>Stump grinding</h3><p>Old stumps ground down so you get your yard back.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/tree-storm.jpg" alt="Storm cleanup" loading="lazy"><div><h3>Storm cleanup</h3><p>Fallen trees and broken limbs cleared after a storm.</p><span class="more">Get an estimate →</span></div></a></div></section>
+<section class="index" id="services"><button class="estimate-open" type="button" data-open-estimate>Get an instant estimate</button><h2>Services</h2><div class="entries"><a class="svc" href="#estimate"><img src="../assets/img/tree-cut.jpg" alt="Tree removal" loading="lazy"><div><h3>Tree removal</h3><p>Dead, leaning or unwanted trees taken down in sections.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/tree-rig.jpg" alt="Trimming &amp; pruning" loading="lazy"><div><h3>Trimming &amp; pruning</h3><p>Overgrown limbs cut back for light, roofs and power lines.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/tree-stump.jpg" alt="Stump grinding" loading="lazy"><div><h3>Stump grinding</h3><p>Old stumps ground down so you get your yard back.</p><span class="more">Get an estimate →</span></div></a><a class="svc" href="#estimate"><img src="../assets/img/tree-storm.jpg" alt="Storm cleanup" loading="lazy"><div><h3>Storm cleanup</h3><p>Fallen trees and broken limbs cleared after a storm.</p><span class="more">Get an estimate →</span></div></a></div></section>
 <section class="pull"><img src="../assets/img/tree-climb.jpg" alt="" loading="lazy"><blockquote>If a trim will do, we&#x27;ll tell you. No taking down a tree you want to keep.</blockquote></section>
 <section class="how"><div><h2>Four simple steps to a clear yard</h2><ol class="steps">
       <li><b>Call or book online</b><span>Pick a day that works for you. We call to confirm.</span></li>
@@ -46,6 +46,6 @@
   <p class="credit">&copy; 2026 Divinity Tree Service &nbsp;|&nbsp; <a href="privacy.html">Privacy</a> &nbsp;|&nbsp; Website by Slated Studio</p>
 </div></footer>
 <div class="mbar"><a href="tel:+18653130378">Call (865) 313-0378</a><a href="#estimate">Free estimate</a></div>
-
+<dialog id="instant-estimate" data-trade="tree_service" aria-label="Instant estimate"></dialog>
 </body>
 </html>
