@@ -76,9 +76,30 @@ async function slotPicker(form) {
   showTimes(data.days[0].day);
   const submit = form.querySelector('button[type="submit"]'); if (submit) submit.textContent = 'Book this time';
 }
+// Optional photos (up to 3): shrunk to ~1600 px JPEGs here, sent with the request, emailed to the owner (never stored).
+async function shrinkPhoto(file) {
+  let img;
+  try { img = await createImageBitmap(file); } catch { throw new Error('One photo could not be opened. Try a JPEG or PNG photo.'); }
+  const scale = Math.min(1, 1600 / Math.max(img.width, img.height)), canvas = document.createElement('canvas');
+  canvas.width = Math.round(img.width * scale); canvas.height = Math.round(img.height * scale);
+  canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+  let quality = .78, url = canvas.toDataURL('image/jpeg', quality);
+  while (url.length > 1000000 && quality > .4) { quality -= .12; url = canvas.toDataURL('image/jpeg', quality); }
+  return url.slice(url.indexOf(',') + 1);
+}
+function addPhotoField(form) {
+  const before = form.querySelector('textarea[name="message"]');
+  if (form.dataset.v2 !== 'true' || !before || form.querySelector('input[name="photos"]')) return;
+  const label = document.createElement('label'), input = document.createElement('input');
+  label.className = 'photo-pick'; label.textContent = 'Add photos (optional, up to 3)';
+  Object.assign(input, {type: 'file', name: 'photos', accept: 'image/*', multiple: true});
+  input.addEventListener('change', () => { if (input.files.length > 3) { label.dataset.note = 'Only the first 3 photos will be sent.'; } else delete label.dataset.note; });
+  label.append(input); before.before(label);
+}
 document.querySelectorAll('form.demo-form').forEach(form => {
   if (form.dataset.native) return;
   if (form.dataset.slots === 'true' && form.dataset.endpoint) slotPicker(form);
+  addPhotoField(form);
   const loaded = Date.now();
   form.elements.namedItem('t').value = String(loaded);
   const button = form.querySelector('button[type="submit"]');
@@ -99,6 +120,9 @@ document.querySelectorAll('form.demo-form').forEach(form => {
     result.textContent = 'Sending your request…';
     try {
       const values = Object.fromEntries(new FormData(form));
+      delete values.photos;
+      const files = [...(form.querySelector('input[name="photos"]')?.files || [])].slice(0, 3);
+      if (files.length) { result.textContent = 'Preparing your photos…'; values.photos = await Promise.all(files.map(shrinkPhoto)); result.textContent = 'Sending your request…'; }
       values.site = form.dataset.site;
       values.t = loaded;
       values.page = window.location.pathname;
