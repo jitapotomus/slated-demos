@@ -1,0 +1,4 @@
+/* From the Brand Card (BRAND_CARDS.md). */
+:root{--brand:#0a6a1e;--accent:#0a6a1e;--dark:#10241a;--light:#eef5ee;--head-case:uppercase}
+.hero h1 em{color:#c9f0c3}.hero.badge{background:linear-gradient(180deg,#0a6a1e,#075417)}h1,h2,h3{font-style:italic}
+.hero .btn.main{background:#fff;color:#0a6a1e}.hero .btn.main:hover{background:#e8f5e9;filter:none}

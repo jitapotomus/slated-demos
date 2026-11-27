@@ -1,0 +1,4 @@
+/* From the Brand Card (BRAND_CARDS.md). */
+:root{--brand:#0b1f4a;--accent:#b0101c;--dark:#0b1f4a;--light:#f4f5f9}
+.hero.badge{background:#0b1f4a}.hero h1 em{color:#ff8a8f}.hero.badge::before{content:'';position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(90deg,#b0101c 0 50%,#fff 50% 100%)}.chip{border-radius:0;width:min(320px,85%);aspect-ratio:auto;padding:18px}.chip img{width:100%}
+@media (max-width:900px){.chip{width:210px;padding:12px}}
