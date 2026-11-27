@@ -96,10 +96,21 @@ function addPhotoField(form) {
   input.addEventListener('change', () => { if (input.files.length > 3) { label.dataset.note = 'Only the first 3 photos will be sent.'; } else delete label.dataset.note; });
   label.append(input); before.before(label);
 }
+// Marketing permission: UNticked by default, full wording shown, not required (the Worker saves its own copy of the words).
+window.consentWording = business => `Yes, ${business} may send me reminders and special offers by text, email or automated or AI phone call. Not required to book. Msg and data rates may apply. Reply STOP to opt out.`;
+function addConsentField(form) {
+  const submit = form.querySelector('button[type="submit"]');
+  if (form.dataset.v2 !== 'true' || !submit || form.querySelector('input[name="consent"]')) return;
+  const label = document.createElement('label'), box = document.createElement('input'), text = document.createElement('span');
+  label.className = 'consent-pick'; Object.assign(box, {type: 'checkbox', name: 'consent', value: 'yes'});
+  text.textContent = window.consentWording(form.dataset.business || 'this business');
+  label.append(box, text); submit.before(label);
+}
 document.querySelectorAll('form.demo-form').forEach(form => {
   if (form.dataset.native) return;
   if (form.dataset.slots === 'true' && form.dataset.endpoint) slotPicker(form);
   addPhotoField(form);
+  addConsentField(form);
   const loaded = Date.now();
   form.elements.namedItem('t').value = String(loaded);
   const button = form.querySelector('button[type="submit"]');

@@ -102,7 +102,13 @@ if (panel) {
         if(key==='day') {input.min=new Date(Date.now()-86400000).toISOString().slice(0,10);input.max=new Date(Date.now()+120*86400000).toISOString().slice(0,10);}
         input.addEventListener('input',()=>{contacts[key]=input.value;});row.append(input);content.append(row);
       }
-      content.append(el('p','We only use this to contact you about your request.'));
+      // Marketing permission: unticked, full wording, not required (the Worker saves its own copy of the words).
+      const consent=el('label','',{class:'estimate-consent'}), tick=el('input','',{type:'checkbox',name:'consent'});
+      tick.checked=contacts.consent==='yes';
+      tick.addEventListener('change',()=>{if(tick.checked)contacts.consent='yes';else delete contacts.consent;});
+      consent.append(tick,el('span',(window.consentWording || (b=>`Yes, ${b} may send me reminders and special offers.`))(source.dataset.business || 'this business')));
+      content.append(consent);
+      content.append(el('p','Without the box ticked, we only use this to contact you about your request.'));
       const hp=el('input','',{name:'hp',class:'estimate-hp',tabindex:'-1',autocomplete:'off','aria-hidden':'true'});content.append(hp);
       next.textContent=config.sample && !source.dataset.endpoint ? 'Try sample request' : 'Send request';
     }

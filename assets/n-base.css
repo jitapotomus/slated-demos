@@ -65,3 +65,7 @@ footer{background:var(--dark);color:#e9e4da;font-size:14px}
 .photo-pick{display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500}
 .photo-pick input{font-size:14px;max-width:100%}
 .photo-pick[data-note]::after{content:attr(data-note);font-size:13px;color:#b45309}
+
+/* Marketing permission checkbox (site.js / estimate widget) */
+.consent-pick,.estimate-consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;font-weight:400;opacity:.85;text-align:left}
+.consent-pick input,.estimate-consent input{width:auto;flex:0 0 auto;margin-top:3px}
